@@ -1,7 +1,4 @@
-User-agent: *
+﻿User-agent: *
 Allow: /
-Disallow: /assets/
 
-Sitemap: https://unwrapplsql.vercel.app/sitemap.xml
-
-Host: https://unwrapplsql.vercel.app
+Sitemap: https://unwrapplsql.onrender.com/sitemap.xml
