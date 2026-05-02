@@ -6,7 +6,7 @@
 <title>What is Wrapped PL/SQL? The Complete 2024 Guide | UnwrapPLSQL</title>
 <meta name="description" content="A deep dive into Oracle's PL/SQL wrap utility. Learn how wrapping works, its history across Oracle versions, what can be recovered, and how to use our free online unwrap analyzer.">
 <meta name="keywords" content="oracle wrapped pl/sql, plsql wrap, unwrap plsql, decode oracle wrap, wrap utility oracle, plsql obfuscation, oracle 10g wrap, oracle 11g wrap, dbms_ddl.wrap">
-<link rel="canonical" href="https://unwrapplsql.netlify.app/seo/plsql-guide.html">
+<link rel="canonical" href="https://www.devtoolstack.in/unwrapplsql/seo/plsql-guide.html">
 <script src="https://cdn.tailwindcss.com"></script>
 <style>
   body { font-family: 'Inter', system-ui, -apple-system, sans-serif; }
@@ -33,7 +33,7 @@
 <header class="bg-white border-b shadow-sm py-5">
   <div class="max-w-5xl mx-auto px-4 sm:px-6">
     <div class="flex justify-between items-center">
-      <a href="../index.html" class="text-blue-600 hover:text-blue-800 font-medium">← Back to Unwrap Tool</a>
+      <a href="../index.html" class="text-blue-600 hover:text-blue-800 font-medium">ÃƒÂ¢Ã¢â‚¬Â Ã‚Â Back to Unwrap Tool</a>
       <span class="text-sm text-gray-500">Updated: January 2024</span>
     </div>
     <h1 class="text-4xl md:text-5xl font-bold mt-6 text-gray-900">The Complete Guide to Wrapped PL/SQL</h1>
@@ -49,7 +49,7 @@
     <p>The wrapping process is performed using either the command-line <code>wrap</code> utility or the <code>DBMS_DDL.WRAP</code> procedure. The output always begins with a header like <code>CREATE OR REPLACE ... wrapped</code>, followed by a long Base64-like encoded string.</p>
     
     <div class="bg-blue-50 border-l-4 border-blue-500 p-5 my-6">
-      <p class="font-semibold text-blue-800 m-0">💡 Key Insight:</p>
+      <p class="font-semibold text-blue-800 m-0">ÃƒÂ°Ã…Â¸Ã¢â‚¬â„¢Ã‚Â¡ Key Insight:</p>
       <p class="text-blue-800 m-0">Wrapping is <strong>not encryption</strong>. It's a deterministic obfuscation algorithm that can be reversed with public knowledge. It's designed to deter casual inspection, not to provide military-grade secrecy.</p>
     </div>
   </section>
@@ -75,9 +75,9 @@
         <tr><th>Oracle Version</th><th>Algorithm</th><th>Recoverability</th></tr>
       </thead>
       <tbody>
-        <tr><td><strong>Oracle 8i / 9i</strong></td><td>Simple hex encoding of DIANA (Descriptive Intermediate Attributed Notation for Ada) nodes. No compression.</td><td><span class="text-green-600 font-semibold">High</span> – Fully reversible with public tools.</td></tr>
-        <tr><td><strong>Oracle 10g / 11g</strong></td><td>Base64 encoding + byte substitution table + LZ compression. A SHA-1 hash is prepended for integrity checks.</td><td><span class="text-yellow-600 font-semibold">Medium-High</span> – Fully reversible with the correct substitution table and a zlib decompressor.</td></tr>
-        <tr><td><strong>Oracle 12c+ (up to 23c)</strong></td><td>Similar to 10g/11g, but with an enhanced substitution table and more complex obfuscation of certain tokens.</td><td><span class="text-yellow-600 font-semibold">Medium</span> – Reversible, but some variable names and comments are permanently lost.</td></tr>
+        <tr><td><strong>Oracle 8i / 9i</strong></td><td>Simple hex encoding of DIANA (Descriptive Intermediate Attributed Notation for Ada) nodes. No compression.</td><td><span class="text-green-600 font-semibold">High</span> ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Å“ Fully reversible with public tools.</td></tr>
+        <tr><td><strong>Oracle 10g / 11g</strong></td><td>Base64 encoding + byte substitution table + LZ compression. A SHA-1 hash is prepended for integrity checks.</td><td><span class="text-yellow-600 font-semibold">Medium-High</span> ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Å“ Fully reversible with the correct substitution table and a zlib decompressor.</td></tr>
+        <tr><td><strong>Oracle 12c+ (up to 23c)</strong></td><td>Similar to 10g/11g, but with an enhanced substitution table and more complex obfuscation of certain tokens.</td><td><span class="text-yellow-600 font-semibold">Medium</span> ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Å“ Reversible, but some variable names and comments are permanently lost.</td></tr>
       </tbody>
     </table>
     <p><strong>Note:</strong> Our online tool uses the public-domain algorithm for Oracle 10g and newer to achieve full or near-full recovery.</p>
@@ -95,7 +95,7 @@
       <li><strong>Base64 Encoding:</strong> The substituted byte array is encoded in Base64 format.</li>
       <li><strong>Header Addition:</strong> A header containing the object type, name, and the word "wrapped" is added. A checksum line (e.g., <code>1e2 21d</code>) may also be included for validation.</li>
     </ol>
-    <p>The unwrapping process simply reverses these steps: Base64 decode → reverse substitution → discard hash → LZ decompress.</p>
+    <p>The unwrapping process simply reverses these steps: Base64 decode ÃƒÂ¢Ã¢â‚¬Â Ã¢â‚¬â„¢ reverse substitution ÃƒÂ¢Ã¢â‚¬Â Ã¢â‚¬â„¢ discard hash ÃƒÂ¢Ã¢â‚¬Â Ã¢â‚¬â„¢ LZ decompress.</p>
     
     <h3>Example: Before and After Wrapping</h3>
     <p><strong>Original PL/SQL Procedure:</strong></p>
@@ -151,7 +151,7 @@ I3jK4lM5nO6pQ7rS8tU9vW0xY1zA2bC3dE4fG5hI6jK7lM8nO9pQ0rS1tU2vW3xY4zA5bC6
   <section>
     <h2>Legal and Ethical Considerations</h2>
     <div class="bg-amber-50 border-l-4 border-amber-500 p-5 my-6">
-      <p class="font-semibold text-amber-800 m-0">⚠️ Important Disclaimer</p>
+      <p class="font-semibold text-amber-800 m-0">ÃƒÂ¢Ã…Â¡Ã‚Â ÃƒÂ¯Ã‚Â¸Ã‚Â Important Disclaimer</p>
       <p class="text-amber-800 m-0">Our tool is provided for legitimate purposes only. You should only attempt to unwrap code that you own, have explicit permission to analyze, or are legally entitled to reverse engineer (e.g., for security research on your own systems). Unwrapping third-party proprietary software may violate license agreements and intellectual property laws. UnwrapPLSQL is not responsible for misuse.</p>
     </div>
     <p>Legitimate use cases include:</p>
@@ -166,8 +166,8 @@ I3jK4lM5nO6pQ7rS8tU9vW0xY1zA2bC3dE4fG5hI6jK7lM8nO9pQ0rS1tU2vW3xY4zA5bC6
   <!-- CTA Box -->
   <div class="cta-box">
     <h3 class="text-white text-2xl font-bold m-0">Ready to Unwrap Your PL/SQL?</h3>
-    <p class="text-blue-100 mt-2">Try our free online tool. No signup, no server uploads — everything runs securely in your browser.</p>
-    <a href="../index.html">🔓 Analyze & Unwrap Now</a>
+    <p class="text-blue-100 mt-2">Try our free online tool. No signup, no server uploads ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â everything runs securely in your browser.</p>
+    <a href="../index.html">ÃƒÂ°Ã…Â¸Ã¢â‚¬ÂÃ¢â‚¬Å“ Analyze & Unwrap Now</a>
   </div>
 
   <section>
@@ -185,23 +185,23 @@ I3jK4lM5nO6pQ7rS8tU9vW0xY1zA2bC3dE4fG5hI6jK7lM8nO9pQ0rS1tU2vW3xY4zA5bC6
     <h2>Frequently Asked Questions (FAQ)</h2>
     
     <div class="faq-item">
-      <div class="faq-question">❓ Does wrapping affect PL/SQL performance?</div>
+      <div class="faq-question">ÃƒÂ¢Ã‚ÂÃ¢â‚¬Å“ Does wrapping affect PL/SQL performance?</div>
       <div class="faq-answer">No. The Oracle database unwraps the code internally at compile time and executes the original bytecode. There is zero runtime performance penalty.</div>
     </div>
     <div class="faq-item">
-      <div class="faq-question">❓ Can I wrap triggers and type bodies?</div>
+      <div class="faq-question">ÃƒÂ¢Ã‚ÂÃ¢â‚¬Å“ Can I wrap triggers and type bodies?</div>
       <div class="faq-answer">Yes. The <code>wrap</code> utility and <code>DBMS_DDL.WRAP</code> support all PL/SQL program units: packages, procedures, functions, type bodies, and triggers.</div>
     </div>
     <div class="faq-item">
-      <div class="faq-question">❓ Is it possible to prevent unwrapping?</div>
+      <div class="faq-question">ÃƒÂ¢Ã‚ÂÃ¢â‚¬Å“ Is it possible to prevent unwrapping?</div>
       <div class="faq-answer">With Oracle's native wrap, no. Since the algorithm is symmetric and the substitution table is known, determined individuals can always recover the source. Stronger protection requires third-party tools or architectural changes.</div>
     </div>
     <div class="faq-item">
-      <div class="faq-question">❓ How can I tell what Oracle version was used to wrap code?</div>
+      <div class="faq-question">ÃƒÂ¢Ã‚ÂÃ¢â‚¬Å“ How can I tell what Oracle version was used to wrap code?</div>
       <div class="faq-answer">Look at the wrapped header. If you see a line like <code>1e2 21d</code> (two hex numbers), it's likely 10g or later. If the header is shorter and the body is pure hex, it's likely 9i. Our tool automatically detects the version.</div>
     </div>
     <div class="faq-item">
-      <div class="faq-question">❓ Does this tool work on Oracle E-Business Suite wrapped code?</div>
+      <div class="faq-question">ÃƒÂ¢Ã‚ÂÃ¢â‚¬Å“ Does this tool work on Oracle E-Business Suite wrapped code?</div>
       <div class="faq-answer">Yes, Oracle EBS uses the same wrap utility. As long as the code is standard Oracle wrapped PL/SQL, our tool can recover it.</div>
     </div>
   </section>
@@ -209,13 +209,13 @@ I3jK4lM5nO6pQ7rS8tU9vW0xY1zA2bC3dE4fG5hI6jK7lM8nO9pQ0rS1tU2vW3xY4zA5bC6
   <section class="mt-12 pt-8 border-t border-gray-200">
     <h2 class="text-2xl">Ready to Recover Your Code?</h2>
     <p>Head back to the analyzer, paste your wrapped PL/SQL, and see the full source in seconds.</p>
-    <a href="../index.html" class="inline-block bg-blue-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-blue-700 transition">Go to UnwrapPLSQL Tool →</a>
+    <a href="../index.html" class="inline-block bg-blue-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-blue-700 transition">Go to UnwrapPLSQL Tool</a>
   </section>
 </main>
 
 <footer class="border-t border-gray-200 py-8 mt-12 text-center text-gray-500 text-sm">
   <div class="max-w-5xl mx-auto px-4">
-    <p>© 2024 UnwrapPLSQL — Educational resource for Oracle PL/SQL developers.</p>
+    <p>© 2026 UnwrapPLSQL - Educational resource for Oracle PL/SQL developers.</p>
     <p class="mt-2">This guide is maintained by database professionals. Last updated: January 2024.</p>
   </div>
 </footer>

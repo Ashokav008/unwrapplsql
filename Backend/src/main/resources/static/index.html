@@ -7,9 +7,9 @@
   <meta name="description" content="Unwrap Oracle wrapped PL/SQL packages, functions, and procedures online. Upload SQL, decode wrapped PL/SQL, format output, copy, and download clean SQL.">
   <meta name="keywords" content="PL/SQL unwrap, Oracle PL/SQL unwrapper, Oracle wrapped code decoder, unwrap wrapped package, decode wrapped PL/SQL, PL/SQL formatter">
   <meta name="robots" content="index, follow, max-image-preview:large">
-  <link rel="canonical" href="https://unwrapplsql.onrender.com/">
+  <link rel="canonical" href="https://www.devtoolstack.in/unwrapplsql/">
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://unwrapplsql.onrender.com/">
+  <meta property="og:url" content="https://www.devtoolstack.in/unwrapplsql/">
   <meta property="og:title" content="UnwrapPLSQL - Oracle PL/SQL Unwrapper Online">
   <meta property="og:description" content="Decode Oracle wrapped PL/SQL packages, functions, and procedures, then format and download clean SQL.">
   <meta property="og:site_name" content="UnwrapPLSQL">
@@ -19,14 +19,14 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
-  <link rel="icon" href="assets/logo.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/unwrapplsql/style.css">
+  <link rel="icon" href="/unwrapplsql/assets/logo.svg" type="image/svg+xml">
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "WebApplication",
     "name": "UnwrapPLSQL",
-    "url": "https://unwrapplsql.onrender.com/",
+    "url": "https://www.devtoolstack.in/unwrapplsql/",
     "applicationCategory": "DeveloperApplication",
     "operatingSystem": "Web",
     "description": "Online tool to unwrap Oracle wrapped PL/SQL packages, functions, and procedures, then format and download SQL.",
@@ -44,6 +44,38 @@
     ]
   }
   </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is UnwrapPLSQL?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "UnwrapPLSQL is an online developer tool for decoding Oracle wrapped PL/SQL packages, functions, and procedures into readable SQL text."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can I upload a .sql file?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. You can upload a .sql or .txt file containing Oracle wrapped PL/SQL, unwrap it, format the result, copy it, and download the decoded SQL."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "When should I use a PL/SQL unwrapper?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Use a PL/SQL unwrapper when you own the code or have permission to inspect wrapped Oracle PL/SQL for maintenance, migration, recovery, review, or documentation."
+        }
+      }
+    ]
+  }
+  </script>
 </head>
 <body>
   <div class="toast-stack" id="toastStack" aria-live="polite" aria-atomic="true"></div>
@@ -53,7 +85,7 @@
       <nav class="nav compact-nav">
         <div class="brand">
           <span class="brand-mark" aria-hidden="true">
-            <img src="assets/logo.svg" alt="">
+            <img src="/unwrapplsql/assets/logo.svg" alt="">
           </span>
           <span>UnwrapPLSQL</span>
         </div>
@@ -134,11 +166,47 @@
           <button class="btn format" type="button" id="formatBtn">Format PL/SQL</button>
         </div>
       </section>
+
+    <section class="seo-panel card" aria-labelledby="seo-title">
+      <div>
+        <p class="seo-kicker">Oracle developer utility</p>
+        <h2 id="seo-title">Oracle PL/SQL Unwrapper Online</h2>
+        <p>UnwrapPLSQL helps developers decode Oracle wrapped PL/SQL source code from packages, package bodies, procedures, functions, triggers, and type bodies. Paste wrapped PL/SQL or upload a SQL file, then unwrap the code into readable output that can be reviewed, formatted, copied, or downloaded.</p>
+      </div>
+      <div class="seo-grid">
+        <article>
+          <h3>Decode wrapped PL/SQL</h3>
+          <p>Use the tool to inspect wrapped Oracle code when you own the source or have permission to analyze it for debugging, migration, documentation, or recovery.</p>
+        </article>
+        <article>
+          <h3>Format and download SQL</h3>
+          <p>After unwrapping, clean up the PL/SQL output, enable line numbers for review, copy the result, or download the decoded source as a `.sql` file.</p>
+        </article>
+        <article>
+          <h3>Built for Oracle developers</h3>
+          <p>The workflow is focused on common Oracle PL/SQL objects including wrapped package bodies, functions, procedures, and database utility code.</p>
+        </article>
+      </div>
+      <div class="faq-list" aria-label="Frequently asked questions">
+        <details>
+          <summary>What is Oracle wrapped PL/SQL?</summary>
+          <p>Oracle wrapped PL/SQL is obfuscated PL/SQL source code generated by Oracle tools to hide readable implementation details while keeping the database object executable.</p>
+        </details>
+        <details>
+          <summary>Does this tool support SQL file upload?</summary>
+          <p>Yes. You can upload `.sql` or `.txt` files containing wrapped PL/SQL and unwrap them directly in the browser interface.</p>
+        </details>
+        <details>
+          <summary>Is unwrapping PL/SQL allowed?</summary>
+          <p>Only unwrap code that you own, have permission to inspect, or are legally allowed to analyze. Do not use the tool on third-party proprietary code without authorization.</p>
+        </details>
+      </div>
+    </section>
     </main>
   </div>
 
   <script src="https://cdn.jsdelivr.net/npm/pako@2.1.0/dist/pako.min.js"></script>
-  <script src="app.js"></script>
+  <script src="/unwrapplsql/app.js"></script>
 </body>
 </html>
 

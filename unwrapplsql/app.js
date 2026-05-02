@@ -1,4 +1,5 @@
-const API_ENDPOINT = window.UNWRAP_API_ENDPOINT || `${window.location.origin}/api/unwrap`;
+const APP_BASE_PATH = window.location.pathname.startsWith('/unwrapplsql') ? '/unwrapplsql' : '';
+const API_ENDPOINT = window.UNWRAP_API_ENDPOINT || `${window.location.origin}${APP_BASE_PATH}/api/unwrap`;
 
 const SAMPLE_SQL = `CREATE OR REPLACE PACKAGE BODY DEMO_SAMPLE wrapped
 a000000

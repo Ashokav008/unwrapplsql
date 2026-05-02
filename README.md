@@ -1,4 +1,4 @@
-﻿# UnwrapPLSQL
+# UnwrapPLSQL
 
 UnwrapPLSQL has two clear parts:
 
@@ -9,7 +9,7 @@ UnwrapPLSQL has two clear parts:
 
 1. Open `Backend/` in IntelliJ IDEA.
 2. Run `com.unwrap.UnwrapApplication` or Maven goal `spring-boot:run`.
-3. Open `http://localhost:8080` in a browser.
+3. Open `http://localhost:8080/unwrapplsql` in a browser.
 4. Paste wrapped PL/SQL and click **Unwrap code**.
 
 ## Render Deployment
@@ -26,3 +26,11 @@ Important files:
 - `Dockerfile` - production Docker build.
 - `render.yaml` - Render Blueprint configuration.
 - `Backend/src/main/resources/application.properties` - uses Render's `PORT` environment variable.
+
+## Production URL
+
+The canonical production URL is:
+
+- https://www.devtoolstack.in/unwrapplsql/
+
+This keeps the root domain available for other projects and developer tools.
