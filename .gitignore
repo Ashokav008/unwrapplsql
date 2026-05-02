@@ -1,0 +1,14 @@
+﻿# Build output
+Backend/target/
+
+# IDE files
+.idea/
+**/.idea/
+*.iml
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log

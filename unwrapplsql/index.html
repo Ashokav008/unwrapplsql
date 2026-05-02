@@ -1,0 +1,114 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>UnwrapPLSQL - Decode Oracle Wrapped PL/SQL Online</title>
+  <meta name="description" content="Free online tool to analyze, unwrap, download, and format Oracle wrapped PL/SQL code.">
+  <meta name="keywords" content="plsql unwrap, oracle wrapped code, decode plsql, format plsql">
+  <meta name="robots" content="index, follow">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="assets/logo.svg" type="image/svg+xml">
+</head>
+<body>
+  <div class="toast-stack" id="toastStack" aria-live="polite" aria-atomic="true"></div>
+
+  <div class="page-shell">
+    <header class="hero compact-hero">
+      <nav class="nav compact-nav">
+        <div class="brand">
+          <span class="brand-mark" aria-hidden="true">
+            <img src="assets/logo.svg" alt="">
+          </span>
+          <span>UnwrapPLSQL</span>
+        </div>
+        <button class="theme-btn" type="button" id="themeToggle" aria-label="Toggle light or dark theme">Dark theme</button>
+      </nav>
+
+      <section class="hero-content compact-title">
+        <p class="eyebrow">Oracle PL/SQL unwrap utility</p>
+        <h1>Readable PL/SQL in seconds.</h1>
+        <p class="hero-copy">Paste, upload, unwrap, format, and download clean SQL.</p>
+      </section>
+    </header>
+
+    <main class="workspace">
+      <section class="toolbar card main-actions">
+        <div class="toolbar-actions">
+          <label class="toggle">
+            <input type="checkbox" id="lineNumbersToggle">
+            <span>Line numbers</span>
+          </label>
+          <input class="file-input" type="file" id="fileInput" accept=".sql,.txt,text/plain,application/sql">
+          <button class="btn secondary" type="button" id="uploadBtn">Upload file</button>
+          <button class="btn secondary" type="button" id="loadSampleBtn">Load sample</button>
+          <button class="btn secondary" type="button" id="clearBtn">Clear</button>
+          <button class="btn secondary" type="button" id="copyBtn">Copy output</button>
+          <span class="toolbar-spacer" aria-hidden="true"></span>
+          <button class="btn primary big-action" type="button" id="analyzeBtn">Unwrap code</button>
+        </div>
+      </section>
+
+      <section class="editor-grid large-editors">
+        <article class="editor-card card">
+          <div class="editor-header">
+            <div>
+              <h3>Wrapped input</h3>
+              <p>Paste the full wrapped object, including header and slash.</p>
+            </div>
+            <span class="badge">Input</span>
+          </div>
+          <div class="editor-wrap">
+            <pre class="line-numbers" id="inputLineNumbers" aria-hidden="true"></pre>
+            <textarea id="input" spellcheck="false" wrap="off" placeholder="Paste wrapped PL/SQL here..."></textarea>
+          </div>
+        </article>
+
+        <article class="editor-card card">
+          <div class="editor-header">
+            <div>
+              <h3>Unwrapped output</h3>
+              <p>Format and download the decoded PL/SQL.</p>
+            </div>
+            <span class="badge success" id="resultBadge">Ready</span>
+          </div>
+          <div class="editor-wrap">
+            <pre class="line-numbers" id="outputLineNumbers" aria-hidden="true"></pre>
+            <textarea id="output" spellcheck="false" wrap="off" readonly placeholder="Click Unwrap code to decode your PL/SQL."></textarea>
+          </div>
+        </article>
+      </section>
+
+      <section class="bottom-bar card">
+        <div class="meta-grid">
+          <div>
+            <span class="meta-label">Status</span>
+            <strong id="statusText">Waiting for input</strong>
+          </div>
+          <div>
+            <span class="meta-label">Total lines</span>
+            <strong id="lineCount">0</strong>
+          </div>
+          <div>
+            <span class="meta-label">Detected</span>
+            <strong id="objectSummary">Not detected</strong>
+          </div>
+        </div>
+        <div class="bottom-actions">
+          <button class="btn secondary" type="button" id="scrollTopBtn">Back to top</button>
+          <button class="btn secondary" type="button" id="downloadBtn">Download .sql</button>
+          <button class="btn format" type="button" id="formatBtn">Format PL/SQL</button>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/pako@2.1.0/dist/pako.min.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
+
+
