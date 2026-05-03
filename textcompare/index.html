@@ -44,7 +44,75 @@
       "@type": "Offer",
       "price": "0",
       "priceCurrency": "USD"
-    }
+    },
+    "featureList": [
+      "Side-by-side diff view",
+      "Unified diff view",
+      "Word, line, and character comparison",
+      "Per-change merge controls",
+      "Editor and result copy actions",
+      "Local browser processing"
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What can I compare with this text diff checker?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "You can compare plain text, source code, JSON, SQL, logs, markdown, configuration files, and other text-based content directly in the browser."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Does the compare tool upload my content to a server?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "No. The comparison logic runs in the browser, so pasted text and uploaded files are processed locally on your device."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can I ignore whitespace or case differences?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. The tool includes options to ignore case, trim line edges, normalize whitespace, ignore blank lines, and ignore punctuation."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can I merge individual changes between both sides?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. After a comparison, you can move a difference from the left side to the right side or from the right side to the left side using the inline arrow buttons."
+        }
+      }
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "DevToolStack",
+        "item": "https://www.devtoolstack.in/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Text Compare",
+        "item": "https://www.devtoolstack.in/textcompare/"
+      }
+    ]
   }
   </script>
 </head>
@@ -161,6 +229,61 @@
             <strong>No comparison yet</strong>
             <p>Paste text into both panels and click Compare Text.</p>
           </div>
+        </div>
+      </section>
+
+      <section class="seo-panel card" aria-labelledby="seo-title">
+        <div class="seo-intro">
+          <p class="section-kicker">About this tool</p>
+          <h2 id="seo-title">Text compare for code, documents, JSON, SQL, and logs</h2>
+          <p>This online diff checker is built for developers, analysts, QA teams, and support engineers who need a fast way to compare two versions of text without installing desktop software. You can paste content directly into the editors, upload files, review changes side by side, switch to unified view, and merge individual differences with inline controls.</p>
+        </div>
+
+        <div class="seo-grid">
+          <article>
+            <h3>When to use side-by-side diff</h3>
+            <p>Side-by-side comparison works best when you want to inspect both versions together. It is useful for source code reviews, SQL query changes, configuration file edits, JSON payload comparisons, and release-note drafting because the original and updated content remain visible at the same time.</p>
+          </article>
+          <article>
+            <h3>When unified diff is better</h3>
+            <p>Unified diff view is more compact and easier to share in tickets, chats, or documentation. It is helpful when you need a concise list of additions and removals rather than a full two-column workspace.</p>
+          </article>
+          <article>
+            <h3>Why ignore options matter</h3>
+            <p>Whitespace, capitalization, punctuation, and blank lines can create noisy comparisons. The ignore settings help remove those distractions so you can focus on the differences that actually change behavior, meaning, or output.</p>
+          </article>
+        </div>
+
+        <div class="content-columns">
+          <article>
+            <h2>Common text comparison use cases</h2>
+            <p>Developers often compare API responses, SQL scripts, migration files, configuration changes, and source-code snippets during debugging and reviews. Writers and analysts use text comparison to inspect documentation drafts, content updates, changelogs, and exported reports. This makes a browser-based diff tool useful across engineering, product, operations, and documentation workflows.</p>
+            <p>The built-in merge controls also help when you want to accept a change in only one direction. Instead of manually copying and pasting each difference, you can move an individual change from one editor to the other and immediately rerun the comparison.</p>
+          </article>
+          <article>
+            <h2>Browser-based diff checker benefits</h2>
+            <p>A web-based compare tool reduces setup friction. You do not need to install a desktop application or configure a version-control workflow just to inspect two blocks of text. For quick reviews, bug triage, support work, and small code snippets, that speed matters.</p>
+            <p>This page is also designed for long content. The compare workspace keeps important controls visible, groups the most-used actions together, and lets the diff output scroll within its own pane so the page remains usable even with very large files.</p>
+          </article>
+        </div>
+
+        <div class="faq-list">
+          <details>
+            <summary>Does this tool work for large text files?</summary>
+            <p>Yes. The result area uses a bounded scrolling panel so long comparisons remain manageable and the navigation controls stay accessible.</p>
+          </details>
+          <details>
+            <summary>Can I compare JSON or SQL with this page?</summary>
+            <p>Yes. Any text-based content can be compared here, including JSON, SQL, logs, markdown, code, CSV snippets, and config files.</p>
+          </details>
+          <details>
+            <summary>What is the difference between line, word, and character compare?</summary>
+            <p>Line compare is best for files and code, word compare is better for prose and documentation, and character compare helps with short strings where every symbol matters.</p>
+          </details>
+          <details>
+            <summary>Can I copy the compared text and diff output?</summary>
+            <p>Yes. Both editors include copy buttons, the side-by-side result includes copy controls for each side, and the diff report can also be copied or downloaded.</p>
+          </details>
         </div>
       </section>
     </main>
