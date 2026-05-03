@@ -134,6 +134,8 @@
           <a href="/xml-formatter/">XML Formatter</a>
           <a href="/base64-tool/">Base64 Tool</a>
           <a href="/url-encoder-decoder/">URL Tool</a>
+          <a href="/timestamp-converter/">Timestamp</a>
+          <a href="/hash-generator/">Hash Tool</a>
           <button class="theme-toggle" type="button" id="themeToggle">Light mode</button>
         </div>
       </nav>
@@ -241,6 +243,7 @@
           <h2 id="seo-title">Why a JWT decoder is one of the most useful auth debugging tools</h2>
           <p>JSON Web Tokens show up everywhere in modern backend systems. Developers see them in login flows, API gateways, SSO integrations, mobile backends, microservice authorization, reverse proxies, and frontend session handling. The challenge is that a JWT is compact by design, which means the actual claims are hidden behind Base64URL encoding until someone decodes them. A JWT decoder makes that structure visible instantly so teams can understand what a token contains before guessing at the root cause of an auth problem.</p>
           <p>When authentication or authorization fails, the issue is often in the claims rather than in the transport itself. A token might be expired, issued for the wrong audience, missing a required scope, signed with an unexpected algorithm, or created by a different issuer than the one the service trusts. Without decoding the token, debugging becomes slow and error-prone. With a browser-based JWT decoder, engineers can inspect the header and payload immediately and move from confusion to diagnosis much faster.</p>
+          <p>It pairs especially well with <a href="/base64-tool/">Base64 Tool</a> for encoded fragments, <a href="/timestamp-converter/">Timestamp Converter</a> for <code>exp</code>, <code>iat</code>, and <code>nbf</code> claims, <a href="/jsonformatter/">JSON Formatter</a> for payload cleanup, <a href="/hash-generator/">Hash Generator</a> for checksum checks, and <a href="/url-encoder-decoder/">URL Encoder/Decoder</a> when tokens move through redirects or query parameters.</p>
         </div>
 
         <div class="content-columns">

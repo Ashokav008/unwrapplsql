@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hash Generator Online Free | MD5, SHA-1, SHA-256</title>
+  <meta name="description" content="Free online hash generator to create MD5, SHA-1, and SHA-256 hashes instantly for debugging, verification, and data checks.">
+  <meta name="keywords" content="hash generator online, md5 generator, sha256 generator, sha1 generator, checksum tool">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <meta name="author" content="DevToolStack">
+  <meta name="application-name" content="Hash Generator">
+  <meta name="theme-color" content="#0f172a">
+  <link rel="canonical" href="https://www.devtoolstack.in/hash-generator/">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.devtoolstack.in/hash-generator/">
+  <meta property="og:title" content="Hash Generator Online Free | MD5, SHA-1, SHA-256">
+  <meta property="og:description" content="Generate MD5, SHA-1, and SHA-256 hashes instantly in the browser.">
+  <meta property="og:site_name" content="DevToolStack">
+  <meta property="og:locale" content="en_IN">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Hash Generator Online Free | MD5, SHA-1, SHA-256">
+  <meta name="twitter:description" content="Fast browser-based checksum generator for MD5, SHA-1, and SHA-256.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./styles.css">
+  <link rel="icon" href="/unwrapplsql/assets/logo.svg" type="image/svg+xml">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "Hash Generator",
+    "url": "https://www.devtoolstack.in/hash-generator/",
+    "applicationCategory": "DeveloperApplication",
+    "operatingSystem": "Web",
+    "description": "Free browser-based hash generator for MD5, SHA-1, and SHA-256 checksum creation.",
+    "inLanguage": "en",
+    "isAccessibleForFree": true,
+    "publisher": {
+      "@type": "Organization",
+      "name": "DevToolStack",
+      "url": "https://www.devtoolstack.in/"
+    },
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD"
+    }
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "DevToolStack",
+        "item": "https://www.devtoolstack.in/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Hash Generator",
+        "item": "https://www.devtoolstack.in/hash-generator/"
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <div class="toast-stack" id="toastStack" aria-live="polite" aria-atomic="true"></div>
+  <div class="page-shell">
+    <header class="hero">
+      <nav class="nav" aria-label="Primary navigation">
+        <a class="brand" href="/" aria-label="DevToolStack home">
+          <span class="brand-mark" aria-hidden="true">HASH</span>
+          <span><strong>DevToolStack</strong><small>Hash Generator</small></span>
+        </a>
+        <div class="nav-links">
+          <a href="/">Home</a>
+          <a href="/base64-tool/">Base64 Tool</a>
+          <a href="/jwt-decoder/">JWT Tool</a>
+          <a href="/timestamp-converter/">Timestamp</a>
+          <a href="/regex-tester/">Regex Tester</a>
+          <button class="theme-toggle" type="button" id="themeToggle">Light mode</button>
+        </div>
+      </nav>
+      <div class="hero-row">
+        <div>
+          <p class="eyebrow">Developer utility</p>
+          <h1>Hash Generator Online</h1>
+          <p class="hero-subtitle">Generate MD5, SHA-1, and SHA-256 hashes instantly for verification, debugging, and checksum workflows.</p>
+        </div>
+      </div>
+    </header>
+    <main>
+      <section class="workspace card">
+        <div class="toolbar">
+          <div>
+            <p class="section-kicker">Hash workspace</p>
+            <h2>Generate checksums from text input</h2>
+          </div>
+          <div class="toolbar-actions">
+            <button class="btn btn-primary btn-small" type="button" id="generateBtn">Generate hashes</button>
+            <button class="btn btn-secondary btn-small" type="button" id="copyBtn">Copy all</button>
+            <button class="btn btn-secondary btn-small" type="button" id="clearBtn">Clear</button>
+          </div>
+        </div>
+        <div class="status-bar">
+          <span class="status-pill idle" id="statusPill">Ready</span>
+          <p class="status-message" id="statusMessage">Paste text or payload content on the left and generate hashes.</p>
+        </div>
+        <div class="editor-grid">
+          <article class="editor-panel">
+            <div class="editor-head"><div><h3>Input text</h3><p id="inputMeta">0 lines | 0 characters</p></div></div>
+            <textarea id="inputText" spellcheck="false" placeholder="Paste text or data here..."></textarea>
+          </article>
+          <article class="editor-panel outputs">
+            <div class="hash-row"><span>MD5</span><code id="md5Output">—</code></div>
+            <div class="hash-row"><span>SHA-1</span><code id="sha1Output">—</code></div>
+            <div class="hash-row"><span>SHA-256</span><code id="sha256Output">—</code></div>
+          </article>
+        </div>
+      </section>
+      <section class="seo-panel card">
+        <div class="seo-intro">
+          <h2>Why a hash generator is useful in developer workflows</h2>
+          <p>Hash generators are handy for quick verification tasks, checksum comparisons, payload debugging, and basic integrity checks. Developers often need to compare whether two values produce the same digest or confirm that a transformed payload still matches an expected hash.</p>
+          <p>For related workflows, use <a href="/base64-tool/">Base64 Tool</a> for encoded inputs, <a href="/jwt-decoder/">JWT Decoder</a> for auth payloads, <a href="/timestamp-converter/">Timestamp Converter</a> for time-based test data, and <a href="/regex-tester/">Regex Tester</a> when validating the text you hash.</p>
+        </div>
+        <div class="content-columns">
+          <article>
+            <h2>Common hash generation use cases</h2>
+            <p>MD5, SHA-1, and SHA-256 appear in legacy integrations, documentation examples, test fixtures, API signing workflows, and checksum validation tasks. A browser-based hash generator saves time during quick debugging and data verification work.</p>
+            <p>For related workflows, the <a href="/base64-tool/">Base64 Tool</a> helps inspect encoded payloads and the <a href="/jwt-decoder/">JWT Decoder</a> is useful when tokens and hashed values appear in neighboring auth debugging tasks.</p>
+          </article>
+          <article>
+            <h2>Why browser-based hashing helps</h2>
+            <p>A local browser tool is great for low-friction checks because it avoids extra setup and keeps sensitive input on your device.</p>
+            <p>It is especially useful when you need a quick checksum alongside payload inspection, string normalization, or auth investigation.</p>
+          </article>
+        </div>
+      </section>
+    </main>
+  </div>
+  <script src="./vendor/md5.min.js"></script>
+  <script src="./script.js"></script>
+</body>
+</html>

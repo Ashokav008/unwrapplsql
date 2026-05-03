@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>DevToolStack - Free Online Developer Tools for Oracle, SQL and Backend</title>
-  <meta name="description" content="DevToolStack is a fast, SEO-friendly hub of free online developer tools for Oracle PL/SQL, JSON formatting, text comparison, XML formatting, YAML formatting, Base64 utilities, URL encoding, JWT decoding, and backend workflows.">
+  <meta name="description" content="DevToolStack is a fast, SEO-friendly hub of free online developer tools for Oracle PL/SQL, SQL formatting, regex testing, timestamp conversion, hash generation, JSON formatting, text comparison, XML formatting, YAML formatting, Base64 utilities, URL encoding, JWT decoding, and backend workflows.">
   <meta name="robots" content="index, follow, max-image-preview:large">
   <meta name="author" content="DevToolStack">
   <meta name="application-name" content="DevToolStack">
@@ -13,12 +13,12 @@
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://www.devtoolstack.in/">
   <meta property="og:title" content="DevToolStack - Free Online Developer Tools">
-  <meta property="og:description" content="Fast browser-based tools for Oracle PL/SQL, JSON, XML, and backend workflows. Launch live developer utilities instantly.">
+  <meta property="og:description" content="Fast browser-based tools for Oracle PL/SQL, SQL, regex, timestamps, hashes, JSON, XML, and backend workflows. Launch live developer utilities instantly.">
   <meta property="og:site_name" content="DevToolStack">
   <meta property="og:locale" content="en_IN">
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="DevToolStack - Free Online Developer Tools">
-  <meta name="twitter:description" content="Free online developer tools for Oracle, SQL, and backend workflows.">
+  <meta name="twitter:description" content="Free online developer tools for Oracle, SQL, regex, timestamps, hashes, and backend workflows.">
   <link rel="icon" href="/unwrapplsql/assets/logo.svg" type="image/svg+xml">
   <script type="application/ld+json">
   {
@@ -52,7 +52,8 @@
         "@type": "ListItem",
         "position": 2,
         "name": "SQL Formatter",
-        "description": "Coming soon: SQL formatter online for clean, readable SQL and PL/SQL."
+        "description": "Format SQL and PL/SQL online with readable indentation, keyword normalization, and cleaner query structure.",
+        "url": "https://www.devtoolstack.in/sql-formatter/"
       },
       {
         "@type": "ListItem",
@@ -102,6 +103,27 @@
         "name": "YAML Formatter",
         "description": "Format YAML, validate config files, and normalize manifests online.",
         "url": "https://www.devtoolstack.in/yaml-formatter/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 10,
+        "name": "Regex Tester",
+        "description": "Test regular expressions online with match highlighting, flags, and captured results.",
+        "url": "https://www.devtoolstack.in/regex-tester/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 11,
+        "name": "Timestamp Converter",
+        "description": "Convert Unix timestamps, ISO strings, and local date values instantly online.",
+        "url": "https://www.devtoolstack.in/timestamp-converter/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 12,
+        "name": "Hash Generator",
+        "description": "Generate MD5, SHA-1, and SHA-256 hashes online for debugging and verification.",
+        "url": "https://www.devtoolstack.in/hash-generator/"
       }
     ]
   }
@@ -363,7 +385,11 @@
         <a class="nav-link" href="#roadmap">Roadmap</a>
         <a class="nav-link" href="#guides">Guides</a>
         <a class="nav-link" href="/jsonformatter/">JSON Formatter</a>
+        <a class="nav-link" href="/sql-formatter/">SQL Formatter</a>
         <a class="nav-link" href="/textcompare/">Text Compare</a>
+        <a class="nav-link" href="/regex-tester/">Regex Tester</a>
+        <a class="nav-link" href="/timestamp-converter/">Timestamp</a>
+        <a class="nav-link" href="/hash-generator/">Hash Tool</a>
         <a class="nav-link" href="/xml-formatter/">XML Formatter</a>
         <a class="nav-link" href="/base64-tool/">Base64 Tool</a>
         <a class="nav-link" href="/url-encoder-decoder/">URL Tool</a>
@@ -394,8 +420,12 @@
           <div class="window-bar" aria-hidden="true"><span></span><span></span><span></span></div>
           <pre class="code-preview">DevToolStack
   /unwrapplsql/    -> Oracle PL/SQL unwrap
+  /sql-formatter/ -> format SQL and PL/SQL
   /jsonformatter/ -> format and validate JSON
   /textcompare/  -> compare text and code
+  /regex-tester/ -> test regex and highlight matches
+  /timestamp-converter/ -> convert Unix and ISO time
+  /hash-generator/ -> create MD5 and SHA digests
   /xml-formatter/ -> format XML and SOAP
   /base64-tool/ -> encode and decode Base64
   /url-encoder-decoder/ -> escape and unescape URLs
@@ -403,8 +433,8 @@
   /yaml-formatter/ -> format YAML and configs</pre>
         </div>
         <div class="preview-meta">
-          <div class="metric"><strong>8</strong><span>Live tools</span></div>
-          <div class="metric"><strong>4</strong><span>Planned tools</span></div>
+          <div class="metric"><strong>12</strong><span>Live tools</span></div>
+          <div class="metric"><strong>0</strong><span>Planned tools</span></div>
           <div class="metric"><strong>1</strong><span>Shared domain</span></div>
         </div>
       </aside>
@@ -424,7 +454,7 @@
         <div>
           <span class="tool-label">Available now</span>
           <h3>A growing toolkit for common developer tasks</h3>
-          <p>Use the dashboard to jump into the right task, whether you are working with database scripts, JSON payloads, SQL formatting, encoders, decoders, or backend debugging. The homepage stays broad while each tool page is optimized for its own search intent.</p>
+          <p>Use the dashboard to jump into the right task, whether you are working with database scripts, regex validation, timestamp conversion, hash verification, JSON payloads, SQL formatting, encoders, decoders, or backend debugging. The homepage stays broad while each tool page is optimized for its own search intent.</p>
           <ul class="feature-list" aria-label="DevToolStack categories">
             <li>Database utilities</li>
             <li>Data formatters</li>
@@ -434,7 +464,7 @@
         </div>
         <div class="featured-aside">
           <strong>Built as a multi-tool platform</strong>
-          <p>Every tool is hosted under the same domain using clean paths such as <code>/jsonformatter/</code>, <code>/textcompare/</code>, <code>/xml-formatter/</code>, <code>/base64-tool/</code>, <code>/url-encoder-decoder/</code>, <code>/jwt-decoder/</code>, <code>/yaml-formatter/</code>, and <code>/unwrapplsql/</code>. This keeps the brand centralized while giving each utility a dedicated landing page.</p>
+          <p>Every tool is hosted under the same domain using clean paths such as <code>/sql-formatter/</code>, <code>/regex-tester/</code>, <code>/timestamp-converter/</code>, <code>/hash-generator/</code>, <code>/jsonformatter/</code>, <code>/textcompare/</code>, <code>/xml-formatter/</code>, <code>/base64-tool/</code>, <code>/url-encoder-decoder/</code>, <code>/jwt-decoder/</code>, <code>/yaml-formatter/</code>, and <code>/unwrapplsql/</code>. This keeps the brand centralized while giving each utility a dedicated landing page.</p>
           <p><a href="#tools">View all current tools</a></p>
         </div>
       </article>
@@ -461,9 +491,9 @@
           <div>
             <div class="tool-icon" aria-hidden="true">SQL</div>
             <h3>SQL Formatter</h3>
-            <p>Coming soon: format SQL and PL/SQL scripts with readable indentation and keyword alignment.</p>
+            <p>Format SQL and PL/SQL scripts with readable indentation, dialect support, and keyword normalization.</p>
           </div>
-          <footer><span class="status soon">Coming Soon</span><span class="mini-cta">Planned</span></footer>
+          <footer><span class="status live">Live</span><a class="mini-cta" href="/sql-formatter/">Open</a></footer>
         </article>
         <article class="tool-card">
           <div>
@@ -480,6 +510,30 @@
             <p>Compare text, code, logs, SQL, JSON, and configuration files with side-by-side and unified diff views.</p>
           </div>
           <footer><span class="status live">Live</span><a class="mini-cta" href="/textcompare/">Open</a></footer>
+        </article>
+        <article class="tool-card">
+          <div>
+            <div class="tool-icon" aria-hidden="true">RE</div>
+            <h3>Regex Tester</h3>
+            <p>Test regular expressions with flag controls, highlighted matches, and captured result review.</p>
+          </div>
+          <footer><span class="status live">Live</span><a class="mini-cta" href="/regex-tester/">Open</a></footer>
+        </article>
+        <article class="tool-card">
+          <div>
+            <div class="tool-icon" aria-hidden="true">TIME</div>
+            <h3>Timestamp Converter</h3>
+            <p>Convert Unix seconds, Unix milliseconds, ISO strings, and local date values instantly.</p>
+          </div>
+          <footer><span class="status live">Live</span><a class="mini-cta" href="/timestamp-converter/">Open</a></footer>
+        </article>
+        <article class="tool-card">
+          <div>
+            <div class="tool-icon" aria-hidden="true">HASH</div>
+            <h3>Hash Generator</h3>
+            <p>Create MD5, SHA-1, and SHA-256 hashes quickly for debugging, verification, and checksums.</p>
+          </div>
+          <footer><span class="status live">Live</span><a class="mini-cta" href="/hash-generator/">Open</a></footer>
         </article>
         <article class="tool-card">
           <div>
@@ -528,17 +582,17 @@
     <section class="shell" id="roadmap" aria-labelledby="roadmap-title">
       <div class="section-head">
         <div>
-          <p class="section-kicker">Product roadmap</p>
-          <h2 id="roadmap-title">Developer tools TODO list</h2>
+          <p class="section-kicker">Latest launches</p>
+          <h2 id="roadmap-title">Fresh additions to DevToolStack</h2>
         </div>
-        <p>DevToolStack is path-based under one domain. Each future tool will get its own URL, sitemap entry, metadata, and dedicated landing page.</p>
+        <p>These four tools round out the next developer workflow cluster: SQL cleanup, regex validation, timestamp debugging, and quick hashing.</p>
       </div>
-      <p class="roadmap-note">Planned URL pattern: <code>devtoolstack.in/sqlformatter/</code>, <code>devtoolstack.in/regex-tester/</code>, <code>devtoolstack.in/hash-generator/</code>, and more. This keeps every tool SEO-focused and easy to share.</p>
+      <p class="roadmap-note">Each addition ships with its own crawlable URL, schema metadata, internal links, and browser-only workflow so users can land directly on the exact tool they need.</p>
       <div class="roadmap-grid">
-        <article class="roadmap-card"><strong>SQL Formatter</strong><p>Format SQL and PL/SQL scripts with indentation and keyword alignment.</p><span class="roadmap-meta">Next</span></article>
-        <article class="roadmap-card"><strong>Regex Tester</strong><p>Test regular expressions against sample text with match highlighting.</p><span class="roadmap-meta">Planned</span></article>
-        <article class="roadmap-card"><strong>Timestamp Converter</strong><p>Convert Unix timestamps, ISO dates, and local timezone values.</p><span class="roadmap-meta">Planned</span></article>
-        <article class="roadmap-card"><strong>Hash Generator</strong><p>Create MD5, SHA-1, and SHA-256 hashes quickly for debugging and verification.</p><span class="roadmap-meta">Planned</span></article>
+        <article class="roadmap-card"><strong>SQL Formatter</strong><p>Format SQL and PL/SQL scripts with indentation, keyword casing, and dialect-aware layout.</p><span class="roadmap-meta">Live now</span></article>
+        <article class="roadmap-card"><strong>Regex Tester</strong><p>Test regular expressions against sample text with match highlighting, flags, and captured result review.</p><span class="roadmap-meta">Live now</span></article>
+        <article class="roadmap-card"><strong>Timestamp Converter</strong><p>Convert Unix timestamps, ISO dates, and local timezone values with instant UTC and relative views.</p><span class="roadmap-meta">Live now</span></article>
+        <article class="roadmap-card"><strong>Hash Generator</strong><p>Create MD5, SHA-1, and SHA-256 hashes quickly for verification, debugging, and checksum workflows.</p><span class="roadmap-meta">Live now</span></article>
       </div>
     </section>
     <section class="shell" id="guides" aria-labelledby="guides-title">
@@ -559,6 +613,26 @@
           <span>JSON workflow</span>
           <h3>How to Format JSON Online</h3>
           <p>Open the dedicated JSON Formatter landing page for beautifying, validating, minifying, copying, and downloading JSON.</p>
+        </a>
+        <a class="guide-card" href="/sql-formatter/">
+          <span>SQL workflow</span>
+          <h3>Format SQL and PL/SQL Online</h3>
+          <p>Clean up SQL queries, stored procedures, and PL/SQL blocks for review, debugging, and handoff.</p>
+        </a>
+        <a class="guide-card" href="/regex-tester/">
+          <span>Regex workflow</span>
+          <h3>Test Regex Patterns Online</h3>
+          <p>Validate regular expressions against sample text with live highlighting before you commit them to code.</p>
+        </a>
+        <a class="guide-card" href="/timestamp-converter/">
+          <span>Time workflow</span>
+          <h3>Convert Timestamps Online</h3>
+          <p>Turn Unix, ISO, and local time values into readable output for logs, tokens, and API payloads.</p>
+        </a>
+        <a class="guide-card" href="/hash-generator/">
+          <span>Hash workflow</span>
+          <h3>Generate Hashes Online</h3>
+          <p>Create MD5, SHA-1, and SHA-256 values quickly when verifying payloads or comparing outputs.</p>
         </a>
         <a class="guide-card" href="/xml-formatter/">
           <span>XML workflow</span>
@@ -585,11 +659,6 @@
           <h3>Format YAML Online</h3>
           <p>Use the YAML formatter to normalize config files, validate manifests, and improve readability for CI and Kubernetes workflows.</p>
         </a>
-        <a class="guide-card" href="#sql-formatting-practices">
-          <span>SQL workflow</span>
-          <h3>Best SQL Formatting Practices</h3>
-          <p>Understand why consistent formatting matters for code review, migrations, debugging, and long-term maintainability.</p>
-        </a>
       </div>
     </section>
 
@@ -613,17 +682,17 @@
           <div>
             <h3>Why developers need browser-based tools</h3>
             <p>Developer work is full of small, repetitive tasks: formatting SQL, decoding payloads, validating JSON, converting Base64, cleaning logs, and reviewing database scripts. Installing a separate desktop utility for every task slows teams down. Browser-based developer tools solve that problem by making common workflows available instantly from any machine. A developer can open a URL, complete the job, and return to the main task without package installation, account creation, or environment setup.</p>
-            <p>This is especially valuable for backend and database engineers who move between terminals, IDEs, database consoles, remote desktops, and support sessions. Tools that load quickly and expose clear copy/download actions become part of the daily workflow. DevToolStack is designed around that pattern: one focused tool per job, minimal distractions, and clear results.</p>
+            <p>This is especially valuable for backend and database engineers who move between terminals, IDEs, database consoles, remote desktops, and support sessions. Tools that load quickly and expose clear copy/download actions become part of the daily workflow. DevToolStack is designed around that pattern: one focused tool per job, minimal distractions, and clear results. That now includes dedicated pages for <a href="/sql-formatter/">SQL formatting</a>, <a href="/regex-tester/">regex testing</a>, <a href="/timestamp-converter/">timestamp conversion</a>, and <a href="/hash-generator/">hash generation</a>.</p>
           </div>
           <div>
             <h3 id="sql-formatting-practices">Best SQL formatting practices</h3>
             <p>Consistent SQL formatting improves code review, debugging, and knowledge transfer. Keywords should be readable, nested blocks should be indented, and long expressions should be broken into logical sections. For PL/SQL, structure matters even more because packages contain declarations, functions, procedures, exception handlers, cursors, and SQL statements in a single file. A formatter helps developers recognize control flow and separate business logic from database access.</p>
-            <p>The upcoming SQL Formatter will build on the same principles used in UnwrapPLSQL: instant access, readable output, copy support, and download options. The live JSON Formatter, Text Compare, XML Formatter, Base64 Tool, URL Encoder/Decoder, JWT Decoder, and YAML Formatter support backend debugging and API development workflows, making DevToolStack a central dashboard for fast online developer utilities.</p>
+            <p>The live <a href="/sql-formatter/">SQL Formatter</a> builds on the same principles used in <a href="/unwrapplsql/">UnwrapPLSQL</a>: instant access, readable output, copy support, and download options. Related tools such as <a href="/textcompare/">Text Compare</a>, <a href="/jsonformatter/">JSON Formatter</a>, <a href="/xml-formatter/">XML Formatter</a>, <a href="/yaml-formatter/">YAML Formatter</a>, <a href="/regex-tester/">Regex Tester</a>, <a href="/timestamp-converter/">Timestamp Converter</a>, <a href="/hash-generator/">Hash Generator</a>, <a href="/base64-tool/">Base64 Tool</a>, <a href="/url-encoder-decoder/">URL Encoder/Decoder</a>, and <a href="/jwt-decoder/">JWT Decoder</a> support the rest of the debugging workflow.</p>
           </div>
         </div>
 
         <h2>Benefits of DevToolStack</h2>
-        <p>DevToolStack is built as a central platform rather than a single isolated page. Each tool gets a clean path-based URL such as <code>/unwrapplsql/</code>, <code>/jsonformatter/</code>, <code>/textcompare/</code>, <code>/xml-formatter/</code>, <code>/base64-tool/</code>, <code>/url-encoder-decoder/</code>, <code>/jwt-decoder/</code>, or <code>/yaml-formatter/</code>, while future utilities can use paths like <code>/sqlformatter/</code> and <code>/regex-tester/</code>. This structure keeps the dashboard useful for repeat visitors while allowing Google to rank each dedicated tool page for its own search intent.</p>
+        <p>DevToolStack is built as a central platform rather than a single isolated page. Each tool gets a clean path-based URL such as <code>/unwrapplsql/</code>, <code>/jsonformatter/</code>, <code>/sql-formatter/</code>, <code>/textcompare/</code>, <code>/regex-tester/</code>, <code>/timestamp-converter/</code>, <code>/hash-generator/</code>, <code>/xml-formatter/</code>, <code>/base64-tool/</code>, <code>/url-encoder-decoder/</code>, <code>/jwt-decoder/</code>, or <code>/yaml-formatter/</code>. This structure keeps the dashboard useful for repeat visitors while allowing Google to rank each dedicated tool page for its own search intent.</p>
         <p>The platform focuses on fast loading, semantic HTML, mobile-first layouts, clear headings, internal links, and crawlable content. Users get instant access without login friction, and search engines get a structured site with a root homepage, sitemap, robots file, guide content, and tool-specific landing pages. The long-term goal is simple: make DevToolStack a trusted collection of free developer tools online for Oracle developers, SQL users, backend engineers, and data-focused teams.</p>
       </article>
     </section>
@@ -635,7 +704,11 @@
       <nav class="footer-links" aria-label="Footer links">
         <a href="/unwrapplsql/">UnwrapPLSQL</a>
         <a href="/jsonformatter/">JSON Formatter</a>
+        <a href="/sql-formatter/">SQL Formatter</a>
         <a href="/textcompare/">Text Compare</a>
+        <a href="/regex-tester/">Regex Tester</a>
+        <a href="/timestamp-converter/">Timestamp</a>
+        <a href="/hash-generator/">Hash Tool</a>
         <a href="/xml-formatter/">XML Formatter</a>
         <a href="/base64-tool/">Base64 Tool</a>
         <a href="/url-encoder-decoder/">URL Tool</a>

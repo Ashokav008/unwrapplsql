@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Regex Tester Online Free | Test Regular Expressions</title>
+  <meta name="description" content="Free online regex tester with live pattern validation, match highlighting, flags, and captured match review for debugging regular expressions.">
+  <meta name="keywords" content="regex tester online, regular expression tester, regex match highlighting, test regex free, regex debugger">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <meta name="author" content="DevToolStack">
+  <meta name="application-name" content="Regex Tester">
+  <meta name="theme-color" content="#0f172a">
+  <link rel="canonical" href="https://www.devtoolstack.in/regex-tester/">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.devtoolstack.in/regex-tester/">
+  <meta property="og:title" content="Regex Tester Online Free | Test Regular Expressions">
+  <meta property="og:description" content="Test regex patterns online with match highlighting, flags, and result summaries.">
+  <meta property="og:site_name" content="DevToolStack">
+  <meta property="og:locale" content="en_IN">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Regex Tester Online Free | Test Regular Expressions">
+  <meta name="twitter:description" content="Fast browser-based regex tester for match debugging and pattern validation.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./styles.css">
+  <link rel="icon" href="/unwrapplsql/assets/logo.svg" type="image/svg+xml">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "Regex Tester",
+    "url": "https://www.devtoolstack.in/regex-tester/",
+    "applicationCategory": "DeveloperApplication",
+    "operatingSystem": "Web",
+    "description": "Free browser-based regex tester with pattern validation, match highlighting, flags, and captured result review.",
+    "inLanguage": "en",
+    "isAccessibleForFree": true,
+    "publisher": {
+      "@type": "Organization",
+      "name": "DevToolStack",
+      "url": "https://www.devtoolstack.in/"
+    },
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD"
+    }
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "DevToolStack",
+        "item": "https://www.devtoolstack.in/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Regex Tester",
+        "item": "https://www.devtoolstack.in/regex-tester/"
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <div class="toast-stack" id="toastStack" aria-live="polite" aria-atomic="true"></div>
+  <div class="page-shell">
+    <header class="hero">
+      <nav class="nav" aria-label="Primary navigation">
+        <a class="brand" href="/" aria-label="DevToolStack home">
+          <span class="brand-mark" aria-hidden="true">RE</span>
+          <span><strong>DevToolStack</strong><small>Regex Tester</small></span>
+        </a>
+        <div class="nav-links">
+          <a href="/">Home</a>
+          <a href="/textcompare/">Text Compare</a>
+          <a href="/url-encoder-decoder/">URL Tool</a>
+          <a href="/hash-generator/">Hash Tool</a>
+          <a href="/jsonformatter/">JSON Formatter</a>
+          <button class="theme-toggle" type="button" id="themeToggle">Light mode</button>
+        </div>
+      </nav>
+      <div class="hero-row">
+        <div>
+          <p class="eyebrow">Developer utility</p>
+          <h1>Regex Tester Online</h1>
+          <p class="hero-subtitle">Test regular expressions with match highlighting, flags, and captured results in the browser.</p>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="workspace card">
+        <div class="toolbar">
+          <div>
+            <p class="section-kicker">Regex workspace</p>
+            <h2>Pattern, flags, and sample text</h2>
+          </div>
+          <div class="toolbar-actions">
+            <button class="btn btn-primary btn-small" type="button" id="testBtn">Test Regex</button>
+            <button class="btn btn-secondary btn-small" type="button" id="copyBtn">Copy matches</button>
+            <button class="btn btn-secondary btn-small" type="button" id="clearBtn">Clear</button>
+          </div>
+        </div>
+        <div class="status-bar">
+          <span class="status-pill idle" id="statusPill">Ready</span>
+          <p class="status-message" id="statusMessage">Enter a regex pattern and sample text to inspect matches.</p>
+        </div>
+        <div class="pattern-grid">
+          <label class="pattern-field"><span>Pattern</span><input id="patternInput" type="text" placeholder="\b[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}\b"></label>
+          <label class="check-option"><input type="checkbox" id="flagG" checked> g</label>
+          <label class="check-option"><input type="checkbox" id="flagI"> i</label>
+          <label class="check-option"><input type="checkbox" id="flagM"> m</label>
+          <label class="check-option"><input type="checkbox" id="flagS"> s</label>
+          <label class="check-option"><input type="checkbox" id="flagU"> u</label>
+        </div>
+        <div class="editor-grid">
+          <article class="editor-panel">
+            <div class="editor-head"><div><h3>Sample text</h3><p id="inputMeta">0 lines | 0 characters</p></div></div>
+            <textarea id="sampleText" spellcheck="false" placeholder="Paste sample text here..."></textarea>
+          </article>
+          <article class="editor-panel">
+            <div class="editor-head"><div><h3>Highlighted matches</h3><p id="matchMeta">0 matches</p></div></div>
+            <div class="highlight-output" id="highlightOutput"></div>
+          </article>
+        </div>
+        <div class="matches-panel">
+          <div class="editor-head"><div><h3>Match list</h3><p id="resultMeta">Captured result overview</p></div></div>
+          <div class="matches-list" id="matchesList"></div>
+        </div>
+      </section>
+
+      <section class="seo-panel card">
+        <div class="seo-intro">
+          <h2>Why a regex tester is useful in real debugging work</h2>
+          <p>Regular expressions are powerful, but they are hard to trust until you can see exactly what they match. A regex tester helps developers validate patterns before using them in code, config, search filters, validation rules, and text processing workflows.</p>
+          <p>The combination of pattern validation, match highlighting, and clear result lists makes a browser-based regex tester practical for API work, log inspection, parsing tasks, and frontend or backend validation logic.</p>
+          <p>It works especially well with <a href="/textcompare/">Text Compare</a> for before-and-after text review, <a href="/url-encoder-decoder/">URL Encoder/Decoder</a> for query-string testing, <a href="/jsonformatter/">JSON Formatter</a> for structured payloads, and <a href="/base64-tool/">Base64 Tool</a> when your sample text includes encoded data.</p>
+        </div>
+        <div class="content-columns">
+          <article>
+            <h2>Common regex testing use cases</h2>
+            <p>Teams use regex testers to validate emails, URLs, identifiers, log lines, query parameters, tokens, and structured text. Match highlighting helps confirm whether the pattern is too broad, too narrow, or failing on edge cases.</p>
+            <p>For related workflows, <a href="/textcompare/">Text Compare</a> helps inspect changed text side by side, while the <a href="/url-encoder-decoder/">URL Encoder/Decoder</a> page is useful when regex patterns are applied to query strings or encoded input.</p>
+          </article>
+          <article>
+            <h2>Why browser-based regex tools help</h2>
+            <p>A quick tester reduces context switching. Developers can paste sample text, toggle flags, and immediately see matches without opening another IDE plugin or CLI helper.</p>
+            <p>If you need to verify output content after parsing or validation, pairing regex testing with the <a href="/hash-generator/">Hash Generator</a> or other DevToolStack utilities can streamline debugging workflows.</p>
+          </article>
+        </div>
+      </section>
+    </main>
+  </div>
+  <script src="./script.js"></script>
+</body>
+</html>

@@ -5,7 +5,11 @@ RUN mvn -f Backend/pom.xml dependency:go-offline -B
 COPY Backend Backend
 COPY unwrapplsql Backend/src/main/resources/static/unwrapplsql
 COPY jsonformatter Backend/src/main/resources/static/jsonformatter
+COPY sql-formatter Backend/src/main/resources/static/sql-formatter
 COPY textcompare Backend/src/main/resources/static/textcompare
+COPY regex-tester Backend/src/main/resources/static/regex-tester
+COPY timestamp-converter Backend/src/main/resources/static/timestamp-converter
+COPY hash-generator Backend/src/main/resources/static/hash-generator
 COPY xml-formatter Backend/src/main/resources/static/xml-formatter
 COPY base64-tool Backend/src/main/resources/static/base64-tool
 COPY url-encoder-decoder Backend/src/main/resources/static/url-encoder-decoder

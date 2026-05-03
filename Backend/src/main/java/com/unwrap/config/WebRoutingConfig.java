@@ -37,8 +37,16 @@ public class WebRoutingConfig implements WebMvcConfigurer {
         registry.addViewController("/unwrapplsql/").setViewName("forward:/unwrapplsql/index.html");
         registry.addViewController("/jsonformatter").setViewName("forward:/jsonformatter/index.html");
         registry.addViewController("/jsonformatter/").setViewName("forward:/jsonformatter/index.html");
+        registry.addViewController("/sql-formatter").setViewName("forward:/sql-formatter/index.html");
+        registry.addViewController("/sql-formatter/").setViewName("forward:/sql-formatter/index.html");
         registry.addViewController("/textcompare").setViewName("forward:/textcompare/index.html");
         registry.addViewController("/textcompare/").setViewName("forward:/textcompare/index.html");
+        registry.addViewController("/regex-tester").setViewName("forward:/regex-tester/index.html");
+        registry.addViewController("/regex-tester/").setViewName("forward:/regex-tester/index.html");
+        registry.addViewController("/timestamp-converter").setViewName("forward:/timestamp-converter/index.html");
+        registry.addViewController("/timestamp-converter/").setViewName("forward:/timestamp-converter/index.html");
+        registry.addViewController("/hash-generator").setViewName("forward:/hash-generator/index.html");
+        registry.addViewController("/hash-generator/").setViewName("forward:/hash-generator/index.html");
         registry.addViewController("/xml-formatter").setViewName("forward:/xml-formatter/index.html");
         registry.addViewController("/xml-formatter/").setViewName("forward:/xml-formatter/index.html");
         registry.addViewController("/base64-tool").setViewName("forward:/base64-tool/index.html");

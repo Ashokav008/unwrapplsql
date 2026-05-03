@@ -230,6 +230,7 @@ async function copyText(text, emptyMessage, successMessage) {
     toast(emptyMessage, 'error');
     return;
   }
+
   await navigator.clipboard.writeText(text);
   toast(successMessage);
 }

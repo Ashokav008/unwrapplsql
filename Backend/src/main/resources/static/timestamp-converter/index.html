@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Timestamp Converter Online Free | Unix &amp; ISO Time Converter</title>
+  <meta name="description" content="Free online timestamp converter for Unix seconds, Unix milliseconds, ISO dates, and local time values.">
+  <meta name="keywords" content="timestamp converter online, unix timestamp converter, iso date converter, epoch converter, date time converter">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <meta name="author" content="DevToolStack">
+  <meta name="application-name" content="Timestamp Converter">
+  <meta name="theme-color" content="#0f172a">
+  <link rel="canonical" href="https://www.devtoolstack.in/timestamp-converter/">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.devtoolstack.in/timestamp-converter/">
+  <meta property="og:title" content="Timestamp Converter Online Free | Unix &amp; ISO Time Converter">
+  <meta property="og:description" content="Convert Unix timestamps, ISO strings, and local time values instantly in the browser.">
+  <meta property="og:site_name" content="DevToolStack">
+  <meta property="og:locale" content="en_IN">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Timestamp Converter Online Free | Unix &amp; ISO Time Converter">
+  <meta name="twitter:description" content="Fast browser-based timestamp converter for Unix, ISO, and local date values.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./styles.css">
+  <link rel="icon" href="/unwrapplsql/assets/logo.svg" type="image/svg+xml">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "Timestamp Converter",
+    "url": "https://www.devtoolstack.in/timestamp-converter/",
+    "applicationCategory": "DeveloperApplication",
+    "operatingSystem": "Web",
+    "description": "Free browser-based timestamp converter for Unix seconds, Unix milliseconds, ISO strings, and local date values.",
+    "inLanguage": "en",
+    "isAccessibleForFree": true,
+    "publisher": {
+      "@type": "Organization",
+      "name": "DevToolStack",
+      "url": "https://www.devtoolstack.in/"
+    },
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD"
+    }
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "DevToolStack",
+        "item": "https://www.devtoolstack.in/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Timestamp Converter",
+        "item": "https://www.devtoolstack.in/timestamp-converter/"
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <div class="toast-stack" id="toastStack" aria-live="polite" aria-atomic="true"></div>
+  <div class="page-shell">
+    <header class="hero">
+      <nav class="nav" aria-label="Primary navigation">
+        <a class="brand" href="/" aria-label="DevToolStack home">
+          <span class="brand-mark" aria-hidden="true">TIME</span>
+          <span><strong>DevToolStack</strong><small>Timestamp Converter</small></span>
+        </a>
+        <div class="nav-links">
+          <a href="/">Home</a>
+          <a href="/jsonformatter/">JSON Formatter</a>
+          <a href="/jwt-decoder/">JWT Tool</a>
+          <a href="/hash-generator/">Hash Tool</a>
+          <a href="/url-encoder-decoder/">URL Tool</a>
+          <button class="theme-toggle" type="button" id="themeToggle">Light mode</button>
+        </div>
+      </nav>
+      <div class="hero-row">
+        <div>
+          <p class="eyebrow">Developer utility</p>
+          <h1>Timestamp Converter Online</h1>
+          <p class="hero-subtitle">Convert Unix timestamps, ISO strings, and local date values instantly for debugging and API work.</p>
+        </div>
+      </div>
+    </header>
+    <main>
+      <section class="workspace card">
+        <div class="toolbar">
+          <div>
+            <p class="section-kicker">Conversion workspace</p>
+            <h2>Paste a date or timestamp value</h2>
+          </div>
+          <div class="toolbar-actions">
+            <button class="btn btn-primary btn-small" type="button" id="convertBtn">Convert</button>
+            <button class="btn btn-secondary btn-small" type="button" id="nowBtn">Use now</button>
+            <button class="btn btn-secondary btn-small" type="button" id="copyBtn">Copy all</button>
+            <button class="btn btn-secondary btn-small" type="button" id="clearBtn">Clear</button>
+          </div>
+        </div>
+        <div class="status-bar">
+          <span class="status-pill idle" id="statusPill">Ready</span>
+          <p class="status-message" id="statusMessage">Enter a Unix timestamp, ISO string, or local date value to convert it.</p>
+        </div>
+        <div class="input-wrap">
+          <label class="input-field"><span>Timestamp or date value</span><input id="inputValue" type="text" placeholder="1714761000 or 2026-05-04T01:30:00Z"></label>
+        </div>
+        <div class="cards-grid">
+          <article class="result-card"><span>Unix seconds</span><strong id="unixSeconds">—</strong></article>
+          <article class="result-card"><span>Unix milliseconds</span><strong id="unixMilliseconds">—</strong></article>
+          <article class="result-card"><span>ISO UTC</span><strong id="isoUtc">—</strong></article>
+          <article class="result-card"><span>UTC string</span><strong id="utcString">—</strong></article>
+          <article class="result-card"><span>Local time</span><strong id="localString">—</strong></article>
+          <article class="result-card"><span>Relative</span><strong id="relativeValue">—</strong></article>
+        </div>
+      </section>
+      <section class="seo-panel card">
+        <div class="seo-intro">
+          <h2>Why timestamp conversion matters in debugging and APIs</h2>
+          <p>Timestamps appear in logs, JWT claims, API payloads, caches, schedulers, audit records, and database rows. A timestamp converter helps developers move quickly between Unix values, ISO strings, UTC views, and local time without guessing.</p>
+          <p>It is especially helpful alongside <a href="/jwt-decoder/">JWT Decoder</a> for token timing claims, <a href="/jsonformatter/">JSON Formatter</a> for payload review, <a href="/url-encoder-decoder/">URL Encoder/Decoder</a> for callback debugging, and <a href="/hash-generator/">Hash Generator</a> when verifying time-sensitive payload changes.</p>
+        </div>
+        <div class="content-columns">
+          <article>
+            <h2>Common timestamp conversion use cases</h2>
+            <p>Teams use timestamp converters when debugging token expiry, validating cron-like schedules, comparing log events, and interpreting API timestamps. It is especially helpful when values switch between seconds, milliseconds, and ISO strings across systems.</p>
+            <p>If you are inspecting token claims, the <a href="/jwt-decoder/">JWT Decoder</a> pairs well with timestamp conversion because expiration and issued-at values often need human-readable inspection.</p>
+          </article>
+          <article>
+            <h2>Why browser-based conversion helps</h2>
+            <p>A simple in-browser converter is faster than reaching for ad hoc scripts during support or debugging sessions. It keeps the workflow lightweight and shareable.</p>
+            <p>For data workflows, pairing this with the <a href="/jsonformatter/">JSON Formatter</a> can make timestamp-heavy payloads easier to read and troubleshoot.</p>
+          </article>
+        </div>
+      </section>
+    </main>
+  </div>
+  <script src="./script.js"></script>
+</body>
+</html>
