@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="DevToolStack favicon">
+  <defs>
+    <linearGradient id="g" x1="8" y1="8" x2="56" y2="56" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#38bdf8"/>
+      <stop offset="1" stop-color="#8b5cf6"/>
+    </linearGradient>
+  </defs>
+  <rect x="4" y="4" width="56" height="56" rx="18" fill="url(#g)"/>
+  <path d="M21 20h8.5c7.7 0 12.5 4.4 12.5 12s-4.8 12-12.5 12H21V20Zm8 18.2c4.7 0 7.7-2.4 7.7-6.2 0-3.8-3-6.2-7.7-6.2h-2.4v12.4H29Zm18.2-18.2h-3.8v24h3.8V20Z" fill="#ffffff"/>
+</svg>
