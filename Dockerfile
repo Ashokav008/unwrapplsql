@@ -7,6 +7,7 @@ COPY unwrapplsql Backend/src/main/resources/static/unwrapplsql
 COPY jsonformatter Backend/src/main/resources/static/jsonformatter
 COPY textcompare Backend/src/main/resources/static/textcompare
 COPY xml-formatter Backend/src/main/resources/static/xml-formatter
+COPY base64-tool Backend/src/main/resources/static/base64-tool
 RUN mvn -f Backend/pom.xml clean package -DskipTests
 
 FROM eclipse-temurin:17-jre

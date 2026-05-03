@@ -41,5 +41,7 @@ public class WebRoutingConfig implements WebMvcConfigurer {
         registry.addViewController("/textcompare/").setViewName("forward:/textcompare/index.html");
         registry.addViewController("/xml-formatter").setViewName("forward:/xml-formatter/index.html");
         registry.addViewController("/xml-formatter/").setViewName("forward:/xml-formatter/index.html");
+        registry.addViewController("/base64-tool").setViewName("forward:/base64-tool/index.html");
+        registry.addViewController("/base64-tool/").setViewName("forward:/base64-tool/index.html");
     }
 }
