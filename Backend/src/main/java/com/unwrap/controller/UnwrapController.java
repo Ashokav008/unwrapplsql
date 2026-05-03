@@ -5,7 +5,6 @@ import java.util.Map;
 
 @RestController
 @RequestMapping({"/api", "/unwrapplsql/api"})
-@CrossOrigin(origins = "*")
 public class UnwrapController {
 
     private final UnwrapService service;

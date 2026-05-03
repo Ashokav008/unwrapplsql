@@ -5,6 +5,7 @@ RUN mvn -f Backend/pom.xml dependency:go-offline -B
 COPY Backend Backend
 COPY unwrapplsql Backend/src/main/resources/static/unwrapplsql
 COPY jsonformatter Backend/src/main/resources/static/jsonformatter
+COPY textcompare Backend/src/main/resources/static/textcompare
 RUN mvn -f Backend/pom.xml clean package -DskipTests
 
 FROM eclipse-temurin:17-jre

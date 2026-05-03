@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Text Compare Online - Free Diff Checker | DevToolStack</title>
+  <meta name="description" content="Free online text compare and diff checker. Compare two text blocks side by side or unified, ignore whitespace or case, upload files, copy, and download differences.">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <meta name="author" content="DevToolStack">
+  <meta name="application-name" content="Text Compare">
+  <meta name="theme-color" content="#0f172a">
+  <link rel="canonical" href="https://www.devtoolstack.in/textcompare/">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.devtoolstack.in/textcompare/">
+  <meta property="og:title" content="Text Compare Online - Free Diff Checker">
+  <meta property="og:description" content="Compare text, code, logs, JSON, SQL, and config files online with side-by-side and unified diff views.">
+  <meta property="og:site_name" content="DevToolStack">
+  <meta property="og:locale" content="en_IN">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Text Compare Online - Free Diff Checker">
+  <meta name="twitter:description" content="Free browser-based diff checker with ignore options, uploads, and export.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/textcompare/style.css">
+  <link rel="icon" href="/unwrapplsql/assets/logo.svg" type="image/svg+xml">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "Text Compare Online",
+    "url": "https://www.devtoolstack.in/textcompare/",
+    "applicationCategory": "DeveloperApplication",
+    "operatingSystem": "Web",
+    "description": "Free online text compare and diff checker with side-by-side, unified, word, line, and character comparison modes.",
+    "inLanguage": "en",
+    "isAccessibleForFree": true,
+    "publisher": {
+      "@type": "Organization",
+      "name": "DevToolStack",
+      "url": "https://www.devtoolstack.in/"
+    },
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD"
+    }
+  }
+  </script>
+</head>
+<body>
+  <div class="toast-stack" id="toastStack" aria-live="polite" aria-atomic="true"></div>
+  <div class="page-shell">
+    <header class="hero">
+      <nav class="nav" aria-label="Primary navigation">
+        <a class="brand" href="/" aria-label="DevToolStack home">
+          <span class="brand-mark" aria-hidden="true">TC</span>
+          <span><strong>DevToolStack</strong><small>Text Compare</small></span>
+        </a>
+        <div class="nav-links">
+          <a href="/">Home</a>
+          <a href="/unwrapplsql/">UnwrapPLSQL</a>
+          <a href="/jsonformatter/">JSON Formatter</a>
+          <button class="theme-toggle" type="button" id="themeToggle">Light mode</button>
+        </div>
+      </nav>
+
+      <div class="hero-row">
+        <div>
+          <p class="eyebrow">Diff checker</p>
+          <h1>Text Compare</h1>
+        </div>
+        <div class="hero-actions">
+          <button class="btn btn-primary" type="button" id="compareHeroBtn">Compare</button>
+          <button class="btn btn-secondary" type="button" id="sampleBtn">Sample</button>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="workspace card" aria-labelledby="workspace-title">
+        <div class="toolbar">
+          <div>
+            <p class="section-kicker">Compare workspace</p>
+            <h2 id="workspace-title">Paste or upload two text versions</h2>
+          </div>
+          <div class="toolbar-actions">
+            <button class="btn btn-secondary" type="button" id="swapBtn">Swap</button>
+            <button class="btn btn-secondary" type="button" id="clearBtn">Clear</button>
+            <button class="btn btn-primary" type="button" id="compareBtn">Compare Text</button>
+          </div>
+        </div>
+
+        <div class="editor-grid">
+          <article class="editor-panel">
+            <div class="editor-head">
+              <div>
+                <h3>Original text</h3>
+                <p id="leftMeta">0 lines | 0 characters</p>
+              </div>
+              <div class="editor-actions action-group">
+                <button class="btn btn-secondary btn-small" type="button" id="copyLeftBtn">Copy</button>
+                <label class="file-label">Upload<input type="file" id="leftFile" accept=".txt,.log,.json,.xml,.sql,.csv,.md,.yaml,.yml,.html,.css,.js,.ts,.java,.py,.properties,.ini"></label>
+              </div>
+            </div>
+            <textarea id="leftText" spellcheck="false" placeholder="Paste the original version here..."></textarea>
+          </article>
+          <article class="editor-panel">
+            <div class="editor-head">
+              <div>
+                <h3>Changed text</h3>
+                <p id="rightMeta">0 lines | 0 characters</p>
+              </div>
+              <div class="editor-actions action-group">
+                <button class="btn btn-secondary btn-small" type="button" id="copyRightBtn">Copy</button>
+                <label class="file-label">Upload<input type="file" id="rightFile" accept=".txt,.log,.json,.xml,.sql,.csv,.md,.yaml,.yml,.html,.css,.js,.ts,.java,.py,.properties,.ini"></label>
+              </div>
+            </div>
+            <textarea id="rightText" spellcheck="false" placeholder="Paste the changed version here..."></textarea>
+          </article>
+        </div>
+
+        <div class="options-grid" aria-label="Comparison options">
+          <label><span>View</span><select id="viewMode"><option value="side">Side by side</option><option value="unified">Unified</option><option value="summary">Summary only</option></select></label>
+          <label><span>Compare level</span><select id="compareLevel"><option value="line">Line by line</option><option value="word">Word by word</option><option value="char">Character by character</option></select></label>
+          <label><input type="checkbox" id="ignoreCase"> Ignore case</label>
+          <label><input type="checkbox" id="trimLines" checked> Trim line edges</label>
+          <label><input type="checkbox" id="normalizeWhitespace"> Normalize whitespace</label>
+          <label><input type="checkbox" id="ignoreBlankLines"> Ignore blank lines</label>
+          <label><input type="checkbox" id="ignorePunctuation"> Ignore punctuation</label>
+          <label><input type="checkbox" id="showOnlyChanges"> Show only changes</label>
+        </div>
+      </section>
+
+      <section class="results card" aria-labelledby="results-title">
+        <div class="toolbar">
+          <div>
+            <p class="section-kicker">Diff result</p>
+            <h2 id="results-title">Review changes</h2>
+          </div>
+          <div class="toolbar-actions">
+            <div class="diff-nav action-group" aria-label="Difference navigation">
+              <button class="btn btn-secondary btn-small" type="button" id="prevDiffBtn">Prev</button>
+              <span class="diff-counter" id="diffCounter">0 / 0</span>
+              <button class="btn btn-secondary btn-small" type="button" id="nextDiffBtn">Next</button>
+            </div>
+            <div class="action-group">
+              <button class="btn btn-secondary btn-small" type="button" id="copyBtn">Copy Diff</button>
+              <button class="btn btn-secondary btn-small" type="button" id="downloadBtn">Download Report</button>
+            </div>
+          </div>
+        </div>
+        <div class="stats-grid" id="statsGrid">
+          <div><strong id="sameCount">0</strong><span>Same</span></div>
+          <div><strong id="addedCount">0</strong><span>Added</span></div>
+          <div><strong id="removedCount">0</strong><span>Removed</span></div>
+          <div><strong id="changedCount">0</strong><span>Changed</span></div>
+        </div>
+        <div class="diff-output" id="diffOutput">
+          <div class="empty-state">
+            <strong>No comparison yet</strong>
+            <p>Paste text into both panels and click Compare Text.</p>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script src="/textcompare/app.js"></script>
+</body>
+</html>
