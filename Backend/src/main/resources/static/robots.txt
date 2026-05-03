@@ -1,4 +1,5 @@
 ﻿User-agent: *
-Allow: /
+Allow: /unwrapplsql/
+Disallow: /unwrapplsql/api/
 
 Sitemap: https://www.devtoolstack.in/unwrapplsql/sitemap.xml

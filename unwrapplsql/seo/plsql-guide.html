@@ -1,223 +1,174 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>What is Wrapped PL/SQL? The Complete 2024 Guide | UnwrapPLSQL</title>
-<meta name="description" content="A deep dive into Oracle's PL/SQL wrap utility. Learn how wrapping works, its history across Oracle versions, what can be recovered, and how to use our free online unwrap analyzer.">
-<meta name="keywords" content="oracle wrapped pl/sql, plsql wrap, unwrap plsql, decode oracle wrap, wrap utility oracle, plsql obfuscation, oracle 10g wrap, oracle 11g wrap, dbms_ddl.wrap">
-<link rel="canonical" href="https://www.devtoolstack.in/unwrapplsql/seo/plsql-guide.html">
-<script src="https://cdn.tailwindcss.com"></script>
-<style>
-  body { font-family: 'Inter', system-ui, -apple-system, sans-serif; }
-  .prose { max-width: 75ch; margin: 0 auto; }
-  .prose h2 { font-size: 1.875rem; margin-top: 2.5rem; margin-bottom: 1rem; font-weight: 700; color: #1e293b; }
-  .prose h3 { font-size: 1.5rem; margin-top: 2rem; margin-bottom: 0.75rem; font-weight: 600; color: #334155; }
-  .prose p { margin-bottom: 1.25rem; line-height: 1.8; color: #334155; }
-  .prose ul, .prose ol { margin-bottom: 1.5rem; padding-left: 1.5rem; }
-  .prose li { margin-bottom: 0.5rem; }
-  .prose table { width: 100%; border-collapse: collapse; margin: 2rem 0; }
-  .prose th, .prose td { border: 1px solid #e2e8f0; padding: 0.75rem; text-align: left; }
-  .prose th { background-color: #f8fafc; font-weight: 600; }
-  .prose code { background: #f1f5f9; padding: 0.2rem 0.4rem; border-radius: 0.25rem; font-size: 0.9em; }
-  .prose pre { background: #1e293b; color: #e2e8f0; padding: 1.5rem; border-radius: 0.5rem; overflow-x: auto; margin: 1.5rem 0; }
-  .cta-box { background: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 100%); border-radius: 1rem; padding: 2rem; margin: 2.5rem 0; text-align: center; }
-  .cta-box a { background: white; color: #1e293b; padding: 0.75rem 2rem; border-radius: 0.5rem; font-weight: 600; text-decoration: none; display: inline-block; margin-top: 1rem; }
-  .faq-item { margin-bottom: 1.5rem; }
-  .faq-question { font-weight: 700; font-size: 1.1rem; color: #0f172a; margin-bottom: 0.25rem; }
-  .faq-answer { color: #475569; padding-left: 1rem; border-left: 3px solid #3b82f6; }
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wrapped PL/SQL Guide - Oracle Wrap, Unwrap, and Safe Recovery | DevToolStack</title>
+  <meta name="description" content="Learn what Oracle wrapped PL/SQL is, when to unwrap it, what can be recovered, and how to use an online PL/SQL unwrapper safely for maintenance and migration.">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <meta name="author" content="DevToolStack">
+  <meta name="theme-color" content="#0f766e">
+  <link rel="canonical" href="https://www.devtoolstack.in/unwrapplsql/seo/plsql-guide.html">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://www.devtoolstack.in/unwrapplsql/seo/plsql-guide.html">
+  <meta property="og:title" content="Wrapped PL/SQL Guide - Oracle Wrap and Unwrap">
+  <meta property="og:description" content="Understand Oracle PL/SQL wrapping, safe unwrapping workflows, and what developers can recover from wrapped code.">
+  <meta property="og:site_name" content="DevToolStack">
+  <meta property="og:locale" content="en_IN">
+  <meta property="og:image" content="https://www.devtoolstack.in/unwrapplsql/assets/logo.svg">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Wrapped PL/SQL Guide - Oracle Wrap and Unwrap">
+  <meta name="twitter:description" content="A practical guide to Oracle wrapped PL/SQL, unwrapping, formatting, and safe recovery.">
+  <meta name="twitter:image" content="https://www.devtoolstack.in/unwrapplsql/assets/logo.svg">
+  <link rel="icon" href="/unwrapplsql/assets/logo.svg" type="image/svg+xml">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Wrapped PL/SQL Guide: Oracle Wrap, Unwrap, and Safe Recovery",
+    "description": "Learn what Oracle wrapped PL/SQL is, when to unwrap it, what can be recovered, and how to use an online PL/SQL unwrapper safely.",
+    "image": "https://www.devtoolstack.in/unwrapplsql/assets/logo.svg",
+    "datePublished": "2026-05-03",
+    "dateModified": "2026-05-03",
+    "author": {
+      "@type": "Organization",
+      "name": "DevToolStack"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "DevToolStack",
+      "url": "https://www.devtoolstack.in/"
+    },
+    "mainEntityOfPage": "https://www.devtoolstack.in/unwrapplsql/seo/plsql-guide.html"
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "DevToolStack",
+        "item": "https://www.devtoolstack.in/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "UnwrapPLSQL",
+        "item": "https://www.devtoolstack.in/unwrapplsql/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "Wrapped PL/SQL Guide",
+        "item": "https://www.devtoolstack.in/unwrapplsql/seo/plsql-guide.html"
+      }
+    ]
+  }
+  </script>
+  <style>
+    :root { color-scheme: light; --ink:#0f172a; --muted:#475569; --brand:#0f766e; --line:#dbe4ee; --soft:#f5f7fb; }
+    * { box-sizing: border-box; }
+    body { margin: 0; font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; color: var(--ink); background: #ffffff; line-height: 1.7; }
+    header { background: linear-gradient(135deg, #06202f, #0f766e); color: #ffffff; padding: 44px 20px; }
+    main, .nav { max-width: 980px; margin: 0 auto; }
+    .nav { display: flex; justify-content: space-between; gap: 16px; align-items: center; margin-bottom: 32px; }
+    a { color: var(--brand); font-weight: 700; text-decoration-thickness: 2px; text-underline-offset: 3px; }
+    header a { color: #ccfbf1; }
+    h1 { font-size: clamp(2rem, 5vw, 3.4rem); line-height: 1.08; margin: 0 0 16px; max-width: 820px; }
+    h2 { margin-top: 38px; line-height: 1.25; }
+    h3 { margin-top: 28px; }
+    p, li { color: var(--muted); }
+    header p { color: #d8f3ee; max-width: 760px; font-size: 1.08rem; }
+    main { padding: 34px 20px 56px; }
+    .card { background: var(--soft); border: 1px solid var(--line); border-radius: 18px; padding: 22px; margin: 24px 0; }
+    code { background: #e2e8f0; border-radius: 6px; padding: 2px 6px; color: #0f172a; }
+    table { width: 100%; border-collapse: collapse; margin: 18px 0; overflow: hidden; border-radius: 12px; }
+    th, td { border: 1px solid var(--line); padding: 12px; text-align: left; vertical-align: top; }
+    th { background: #ecfeff; }
+    .cta { display: inline-flex; margin-top: 14px; padding: 12px 18px; border-radius: 999px; background: #0f766e; color: #ffffff; text-decoration: none; }
+    footer { border-top: 1px solid var(--line); padding: 22px 20px; text-align: center; color: var(--muted); }
+  </style>
 </head>
-<body class="bg-gray-50 text-gray-900 antialiased">
-
-<header class="bg-white border-b shadow-sm py-5">
-  <div class="max-w-5xl mx-auto px-4 sm:px-6">
-    <div class="flex justify-between items-center">
-      <a href="../index.html" class="text-blue-600 hover:text-blue-800 font-medium">ÃƒÂ¢Ã¢â‚¬Â Ã‚Â Back to Unwrap Tool</a>
-      <span class="text-sm text-gray-500">Updated: January 2024</span>
-    </div>
-    <h1 class="text-4xl md:text-5xl font-bold mt-6 text-gray-900">The Complete Guide to Wrapped PL/SQL</h1>
-    <p class="text-xl text-gray-600 mt-3 max-w-3xl">Understand Oracle's wrap utility, how it obfuscates your code, and what you can actually recover using modern unwrap techniques.</p>
+<body>
+<header>
+  <div class="nav">
+    <a href="/unwrapplsql/">UnwrapPLSQL</a>
+    <span>DevToolStack Guide</span>
   </div>
+  <main>
+    <h1>Wrapped PL/SQL Guide: Oracle Wrap, Unwrap, and Safe Recovery</h1>
+    <p>Use this guide to understand what Oracle wrapped PL/SQL is, what an unwrapper can recover, and how to inspect wrapped code responsibly during maintenance, migration, documentation, or disaster recovery.</p>
+    <a class="cta" href="/unwrapplsql/">Open the PL/SQL unwrapper</a>
+  </main>
 </header>
-
-<main class="max-w-5xl mx-auto px-4 sm:px-6 py-10 prose">
-  
+<main>
   <section>
-    <h2>What is Oracle PL/SQL Wrapping?</h2>
-    <p>Oracle PL/SQL wrapping, also known as obfuscation, is a built-in security feature that transforms readable PL/SQL source code into an encoded, unreadable format. When you "wrap" a procedure, function, package, or type body, the original source text is replaced with a block of seemingly random characters. To the Oracle database, however, the wrapped code is perfectly valid and executes exactly like the original.</p>
-    <p>The wrapping process is performed using either the command-line <code>wrap</code> utility or the <code>DBMS_DDL.WRAP</code> procedure. The output always begins with a header like <code>CREATE OR REPLACE ... wrapped</code>, followed by a long Base64-like encoded string.</p>
-    
-    <div class="bg-blue-50 border-l-4 border-blue-500 p-5 my-6">
-      <p class="font-semibold text-blue-800 m-0">ÃƒÂ°Ã…Â¸Ã¢â‚¬â„¢Ã‚Â¡ Key Insight:</p>
-      <p class="text-blue-800 m-0">Wrapping is <strong>not encryption</strong>. It's a deterministic obfuscation algorithm that can be reversed with public knowledge. It's designed to deter casual inspection, not to provide military-grade secrecy.</p>
-    </div>
+    <h2>What is Oracle wrapped PL/SQL?</h2>
+    <p>Oracle wrapped PL/SQL is obfuscated source code. Developers and vendors use Oracle wrapping to hide readable implementation details while keeping packages, package bodies, functions, procedures, triggers, and type bodies executable inside the database.</p>
+    <p>A wrapped object usually starts with a statement such as <code>CREATE OR REPLACE PACKAGE BODY ... wrapped</code>, followed by version markers and encoded text. Oracle can compile and execute this output, but humans cannot easily read it without decoding.</p>
   </section>
 
   <section>
-    <h2>Why Do Developers Wrap PL/SQL Code?</h2>
-    <p>Despite its reversibility, wrapping is still widely used in enterprise Oracle environments. Here are the primary reasons:</p>
+    <h2>When should you unwrap PL/SQL?</h2>
+    <div class="card">
+      <p>Only unwrap PL/SQL that you own, have permission to inspect, or are legally allowed to analyze. Do not unwrap third-party proprietary code without authorization.</p>
+    </div>
     <ul>
-      <li><strong>Intellectual Property Protection:</strong> Prevent competitors or clients from viewing proprietary business logic, pricing algorithms, or trade secrets embedded in the code.</li>
-      <li><strong>Security Through Obscurity:</strong> Hide sensitive information like hardcoded passwords, encryption keys, or table names from unauthorized database users who might have access to <code>DBA_SOURCE</code>.</li>
-      <li><strong>Licensing & Vendor Requirements:</strong> Many third-party Oracle applications (like Oracle E-Business Suite) are delivered wrapped to enforce licensing agreements and prevent modification.</li>
-      <li><strong>Accidental Modification Prevention:</strong> Discourage well-meaning developers from making ad-hoc changes to critical production code without proper change control.</li>
-      <li><strong>Compliance & Auditing:</strong> In some regulated industries, wrapping provides a layer of defense to satisfy auditors that source code is not easily accessible.</li>
+      <li>Recover source for an internal package when the original repository copy is missing.</li>
+      <li>Review legacy PL/SQL before an Oracle migration or application modernization.</li>
+      <li>Document business logic in packages, procedures, and functions that your team maintains.</li>
+      <li>Debug production issues when wrapped source blocks normal code review.</li>
+      <li>Format decoded output so it can be copied, compared, or saved as a <code>.sql</code> file.</li>
     </ul>
   </section>
 
   <section>
-    <h2>The Evolution of Oracle Wrap: From 9i to 23c</h2>
-    <p>Oracle has strengthened the wrap algorithm over the years, making older versions much easier to reverse than newer ones. Understanding the version is critical for any unwrapping attempt.</p>
-    
+    <h2>What can an unwrapper recover?</h2>
     <table>
       <thead>
-        <tr><th>Oracle Version</th><th>Algorithm</th><th>Recoverability</th></tr>
+        <tr><th>Item</th><th>Typical Result</th></tr>
       </thead>
       <tbody>
-        <tr><td><strong>Oracle 8i / 9i</strong></td><td>Simple hex encoding of DIANA (Descriptive Intermediate Attributed Notation for Ada) nodes. No compression.</td><td><span class="text-green-600 font-semibold">High</span> ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Å“ Fully reversible with public tools.</td></tr>
-        <tr><td><strong>Oracle 10g / 11g</strong></td><td>Base64 encoding + byte substitution table + LZ compression. A SHA-1 hash is prepended for integrity checks.</td><td><span class="text-yellow-600 font-semibold">Medium-High</span> ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Å“ Fully reversible with the correct substitution table and a zlib decompressor.</td></tr>
-        <tr><td><strong>Oracle 12c+ (up to 23c)</strong></td><td>Similar to 10g/11g, but with an enhanced substitution table and more complex obfuscation of certain tokens.</td><td><span class="text-yellow-600 font-semibold">Medium</span> ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Å“ Reversible, but some variable names and comments are permanently lost.</td></tr>
+        <tr><td>PL/SQL statements</td><td>Usually recoverable as readable package, function, procedure, or trigger code.</td></tr>
+        <tr><td>Object structure</td><td>Package declarations, bodies, control flow, SQL statements, and exception blocks can normally be reviewed.</td></tr>
+        <tr><td>Formatting</td><td>Original formatting is not preserved, so a formatter is useful after unwrapping.</td></tr>
+        <tr><td>Comments</td><td>Comments are often lost during wrapping and may not be recoverable.</td></tr>
       </tbody>
     </table>
-    <p><strong>Note:</strong> Our online tool uses the public-domain algorithm for Oracle 10g and newer to achieve full or near-full recovery.</p>
   </section>
 
   <section>
-    <h2>How Oracle Wrap Works: A Step-by-Step Breakdown</h2>
-    <p>To understand unwrapping, it helps to see the exact transformations Oracle applies. Here is the 10g+ wrapping pipeline:</p>
+    <h2>How to use UnwrapPLSQL</h2>
     <ol>
-      <li><strong>Tokenization:</strong> The PL/SQL source is parsed into tokens (keywords, identifiers, literals).</li>
-      <li><strong>LZ Compression:</strong> The token stream is compressed using a standard LZ algorithm (similar to <code>gzip</code>). This reduces the size of the final wrapped code.</li>
-      <li><strong>SHA-1 Hash:</strong> A 20-byte SHA-1 hash of the compressed data is generated.</li>
-      <li><strong>Concatenation:</strong> The hash is prepended to the compressed data: <code>[20-byte hash] + [compressed source]</code>.</li>
-      <li><strong>Byte Substitution:</strong> Every byte in this combined array is replaced with a different byte according to a fixed, 256-byte mapping table (the "substitution table"). This is the core obfuscation step.</li>
-      <li><strong>Base64 Encoding:</strong> The substituted byte array is encoded in Base64 format.</li>
-      <li><strong>Header Addition:</strong> A header containing the object type, name, and the word "wrapped" is added. A checksum line (e.g., <code>1e2 21d</code>) may also be included for validation.</li>
+      <li>Paste a full wrapped Oracle object, including the object header and final slash.</li>
+      <li>Or upload a <code>.sql</code> file using the upload button.</li>
+      <li>Click <strong>Unwrap code</strong> to decode the PL/SQL.</li>
+      <li>Use <strong>Format PL/SQL</strong> to clean spacing and indentation.</li>
+      <li>Copy the result or download it as a clean SQL file.</li>
     </ol>
-    <p>The unwrapping process simply reverses these steps: Base64 decode ÃƒÂ¢Ã¢â‚¬Â Ã¢â‚¬â„¢ reverse substitution ÃƒÂ¢Ã¢â‚¬Â Ã¢â‚¬â„¢ discard hash ÃƒÂ¢Ã¢â‚¬Â Ã¢â‚¬â„¢ LZ decompress.</p>
-    
-    <h3>Example: Before and After Wrapping</h3>
-    <p><strong>Original PL/SQL Procedure:</strong></p>
-    <pre><code>CREATE OR REPLACE PROCEDURE calculate_bonus (emp_id IN NUMBER) AS
-  v_salary NUMBER;
-BEGIN
-  SELECT salary INTO v_salary FROM employees WHERE employee_id = emp_id;
-  UPDATE employees SET bonus = v_salary * 0.1 WHERE employee_id = emp_id;
-END calculate_bonus;</code></pre>
-    
-    <p><strong>Wrapped Output (10g+):</strong></p>
-    <pre><code>CREATE OR REPLACE PROCEDURE calculate_bonus wrapped 
-a000000
-369
-abcd
-abcd
-abcd
-abcd
-abcd
-abcd
-abcd
-abcd
-abcd
-abcd
-abcd
-abcd
-abcd
-abcd
-abcd
-7
-4e 8e
-gH3k3xYD5Q3h0S6hZgJW8B+9Vv8wgxDJ2fIGyC9NCL8YG4vIR5RnP0ZpN5VJv1L0X2kM
-3nO8pQrS5tU7vW9xY0zA2bC4dE6fG8hI0jK1lM2nO3pQ4rS5tU6vW7xY8zA9bC0dE1fG2h
-I3jK4lM5nO6pQ7rS8tU9vW0xY1zA2bC3dE4fG5hI6jK7lM8nO9pQ0rS1tU2vW3xY4zA5bC6
-/</code></pre>
   </section>
 
   <section>
-    <h2>Can Wrapped PL/SQL Be Unwrapped? The Truth</h2>
-    <p><strong>Yes, completely.</strong> For Oracle 10g and later, the wrapping algorithm is fully reversible using publicly available knowledge. The original source code, including all logic, variable names (except for some local variables in 12c+), and structure, can be recovered with near 100% fidelity.</p>
-    <p>This has been demonstrated by security researchers and is the basis for many unwrapping tools. The "secret" is not a cryptographic key but a fixed substitution table that was reverse-engineered from the Oracle binary. Because the table is the same for every database of a given version, anyone can replicate the unwrap process.</p>
-    
-    <h3>What Information is Permanently Lost?</h3>
-    <ul>
-      <li><strong>Comments:</strong> All comments are stripped during tokenization and are gone forever.</li>
-      <li><strong>Formatting/Whitespace:</strong> The original indentation and spacing are not preserved; the unwrapped code will be formatted according to Oracle's tokenization.</li>
-      <li><strong>Local Variable Names (12c+):</strong> In newer Oracle versions, local variable names may be replaced with generic names like <code>V0001</code>.</li>
-      <li><strong>Original Line Numbers:</strong> Line numbers from the source file are not retained.</li>
-    </ul>
-    <p>For most recovery scenarios (lost source code, debugging, security audits), the unwrapped output is perfectly usable and functionally identical.</p>
+    <h2>Common issues</h2>
+    <h3>Input is not detected as wrapped</h3>
+    <p>Make sure the input includes the word <code>wrapped</code> and the encoded body generated by Oracle. Partial snippets may not decode correctly.</p>
+    <h3>Output formatting is not identical to the original source</h3>
+    <p>Wrapped PL/SQL does not preserve all original whitespace and comments. Formatting creates readable code, but it cannot perfectly reconstruct every original style choice.</p>
+    <h3>The code belongs to a vendor</h3>
+    <p>Check your license and get permission before analyzing vendor-owned code. Use this tool for legitimate recovery, maintenance, and review workflows.</p>
   </section>
 
   <section>
-    <h2>Legal and Ethical Considerations</h2>
-    <div class="bg-amber-50 border-l-4 border-amber-500 p-5 my-6">
-      <p class="font-semibold text-amber-800 m-0">ÃƒÂ¢Ã…Â¡Ã‚Â ÃƒÂ¯Ã‚Â¸Ã‚Â Important Disclaimer</p>
-      <p class="text-amber-800 m-0">Our tool is provided for legitimate purposes only. You should only attempt to unwrap code that you own, have explicit permission to analyze, or are legally entitled to reverse engineer (e.g., for security research on your own systems). Unwrapping third-party proprietary software may violate license agreements and intellectual property laws. UnwrapPLSQL is not responsible for misuse.</p>
-    </div>
-    <p>Legitimate use cases include:</p>
-    <ul>
-      <li>Recovering your own lost source code when backups are unavailable.</li>
-      <li>Performing security audits on in-house applications to identify exposed secrets.</li>
-      <li>Debugging legacy wrapped code where the original source is missing.</li>
-      <li>Educational purposes to understand how Oracle obfuscation works.</li>
-    </ul>
-  </section>
-
-  <!-- CTA Box -->
-  <div class="cta-box">
-    <h3 class="text-white text-2xl font-bold m-0">Ready to Unwrap Your PL/SQL?</h3>
-    <p class="text-blue-100 mt-2">Try our free online tool. No signup, no server uploads ÃƒÂ¢Ã¢â€šÂ¬Ã¢â‚¬Â everything runs securely in your browser.</p>
-    <a href="../index.html">ÃƒÂ°Ã…Â¸Ã¢â‚¬ÂÃ¢â‚¬Å“ Analyze & Unwrap Now</a>
-  </div>
-
-  <section>
-    <h2>Alternative Methods for Protecting PL/SQL Code</h2>
-    <p>If you need stronger protection than Oracle's native wrap, consider these alternatives:</p>
-    <ul>
-      <li><strong>PL/SQL Native Compilation:</strong> Compiles PL/SQL to native machine code (C code). This makes static analysis significantly harder, though not impossible.</li>
-      <li><strong>Oracle Database Vault:</strong> Restricts access to the <code>DBA_SOURCE</code> and <code>ALL_SOURCE</code> views, preventing even privileged users from seeing the wrapped source.</li>
-      <li><strong>Third-Party Obfuscators:</strong> Commercial tools like Irdeto or Arxan provide stronger, multi-layered obfuscation with control-flow flattening and string encryption.</li>
-      <li><strong>Externalizing Logic:</strong> Move the most sensitive business logic out of PL/SQL entirely and into a compiled language (Java, C#, Go) hosted on a secure application server.</li>
-    </ul>
-  </section>
-
-  <section>
-    <h2>Frequently Asked Questions (FAQ)</h2>
-    
-    <div class="faq-item">
-      <div class="faq-question">ÃƒÂ¢Ã‚ÂÃ¢â‚¬Å“ Does wrapping affect PL/SQL performance?</div>
-      <div class="faq-answer">No. The Oracle database unwraps the code internally at compile time and executes the original bytecode. There is zero runtime performance penalty.</div>
-    </div>
-    <div class="faq-item">
-      <div class="faq-question">ÃƒÂ¢Ã‚ÂÃ¢â‚¬Å“ Can I wrap triggers and type bodies?</div>
-      <div class="faq-answer">Yes. The <code>wrap</code> utility and <code>DBMS_DDL.WRAP</code> support all PL/SQL program units: packages, procedures, functions, type bodies, and triggers.</div>
-    </div>
-    <div class="faq-item">
-      <div class="faq-question">ÃƒÂ¢Ã‚ÂÃ¢â‚¬Å“ Is it possible to prevent unwrapping?</div>
-      <div class="faq-answer">With Oracle's native wrap, no. Since the algorithm is symmetric and the substitution table is known, determined individuals can always recover the source. Stronger protection requires third-party tools or architectural changes.</div>
-    </div>
-    <div class="faq-item">
-      <div class="faq-question">ÃƒÂ¢Ã‚ÂÃ¢â‚¬Å“ How can I tell what Oracle version was used to wrap code?</div>
-      <div class="faq-answer">Look at the wrapped header. If you see a line like <code>1e2 21d</code> (two hex numbers), it's likely 10g or later. If the header is shorter and the body is pure hex, it's likely 9i. Our tool automatically detects the version.</div>
-    </div>
-    <div class="faq-item">
-      <div class="faq-question">ÃƒÂ¢Ã‚ÂÃ¢â‚¬Å“ Does this tool work on Oracle E-Business Suite wrapped code?</div>
-      <div class="faq-answer">Yes, Oracle EBS uses the same wrap utility. As long as the code is standard Oracle wrapped PL/SQL, our tool can recover it.</div>
-    </div>
-  </section>
-
-  <section class="mt-12 pt-8 border-t border-gray-200">
-    <h2 class="text-2xl">Ready to Recover Your Code?</h2>
-    <p>Head back to the analyzer, paste your wrapped PL/SQL, and see the full source in seconds.</p>
-    <a href="../index.html" class="inline-block bg-blue-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-blue-700 transition">Go to UnwrapPLSQL Tool</a>
+    <h2>Start unwrapping safely</h2>
+    <p>UnwrapPLSQL is designed for Oracle developers who need a focused workflow: paste or upload wrapped code, decode it, format it, and download clean SQL.</p>
+    <a class="cta" href="/unwrapplsql/">Use the online PL/SQL unwrapper</a>
   </section>
 </main>
-
-<footer class="border-t border-gray-200 py-8 mt-12 text-center text-gray-500 text-sm">
-  <div class="max-w-5xl mx-auto px-4">
-    <p>© 2026 UnwrapPLSQL - Educational resource for Oracle PL/SQL developers.</p>
-    <p class="mt-2">This guide is maintained by database professionals. Last updated: January 2024.</p>
-  </div>
+<footer>
+  <p>DevToolStack - Updated May 3, 2026 - <a href="/unwrapplsql/sitemap.xml">Sitemap</a></p>
 </footer>
 </body>
-      </html>
+</html>
