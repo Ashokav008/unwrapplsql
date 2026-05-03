@@ -9,6 +9,8 @@ COPY textcompare Backend/src/main/resources/static/textcompare
 COPY xml-formatter Backend/src/main/resources/static/xml-formatter
 COPY base64-tool Backend/src/main/resources/static/base64-tool
 COPY url-encoder-decoder Backend/src/main/resources/static/url-encoder-decoder
+COPY jwt-decoder Backend/src/main/resources/static/jwt-decoder
+COPY yaml-formatter Backend/src/main/resources/static/yaml-formatter
 RUN mvn -f Backend/pom.xml clean package -DskipTests
 
 FROM eclipse-temurin:17-jre

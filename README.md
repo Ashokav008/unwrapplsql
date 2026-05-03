@@ -1,6 +1,6 @@
 # UnwrapPLSQL
 
-UnwrapPLSQL has seven clear parts:
+UnwrapPLSQL has nine clear parts:
 
 - `Backend/` - Spring Boot API for unwrapping Oracle wrapped PL/SQL.
 - `unwrapplsql/` - Static Oracle PL/SQL unwrapper frontend served by Spring Boot in production.
@@ -9,14 +9,16 @@ UnwrapPLSQL has seven clear parts:
 - `xml-formatter/` - Static online XML formatter and SOAP beautifier tool.
 - `base64-tool/` - Static online Base64 encoder and decoder tool.
 - `url-encoder-decoder/` - Static online URL encoder and decoder tool.
+- `jwt-decoder/` - Static online JWT decoder tool.
+- `yaml-formatter/` - Static online YAML formatter and validator tool.
 
 ## Run Locally
 
 1. Open `Backend/` in IntelliJ IDEA.
 2. Run `com.unwrap.UnwrapApplication` or Maven goal `spring-boot:run`.
 3. Open `http://localhost:8080/` for the DevToolStack dashboard.
-4. Open `http://localhost:8080/unwrapplsql/`, `http://localhost:8080/jsonformatter/`, `http://localhost:8080/textcompare/`, `http://localhost:8080/xml-formatter/`, `http://localhost:8080/base64-tool/`, or `http://localhost:8080/url-encoder-decoder/` for a specific tool.
-5. For a standalone static preview of the XML, Base64, or URL tools, you can also open `xml-formatter/index.html`, `base64-tool/index.html`, or `url-encoder-decoder/index.html` directly in a browser.
+4. Open `http://localhost:8080/unwrapplsql/`, `http://localhost:8080/jsonformatter/`, `http://localhost:8080/textcompare/`, `http://localhost:8080/xml-formatter/`, `http://localhost:8080/base64-tool/`, `http://localhost:8080/url-encoder-decoder/`, `http://localhost:8080/jwt-decoder/`, or `http://localhost:8080/yaml-formatter/` for a specific tool.
+5. For a standalone static preview of the XML, Base64, URL, JWT, or YAML tools, you can also open `xml-formatter/index.html`, `base64-tool/index.html`, `url-encoder-decoder/index.html`, `jwt-decoder/index.html`, or `yaml-formatter/index.html` directly in a browser.
 
 ## Render Deployment
 
@@ -24,7 +26,7 @@ This repository is Render-ready using Docker.
 
 1. Push this repository to GitHub.
 2. In Render, create a new **Blueprint** from the GitHub repository, or create a new **Web Service** using the included `Dockerfile`.
-3. Render will build the Spring Boot app and copy `unwrapplsql/`, `jsonformatter/`, `textcompare/`, `xml-formatter/`, `base64-tool/`, and `url-encoder-decoder/` into `Backend/src/main/resources/static` during the Docker build.
+3. Render will build the Spring Boot app and copy `unwrapplsql/`, `jsonformatter/`, `textcompare/`, `xml-formatter/`, `base64-tool/`, `url-encoder-decoder/`, `jwt-decoder/`, and `yaml-formatter/` into `Backend/src/main/resources/static` during the Docker build.
 4. The frontend and API will run on the same Render URL.
 
 Important files:
@@ -44,5 +46,7 @@ The canonical production URLs are:
 - https://www.devtoolstack.in/xml-formatter/
 - https://www.devtoolstack.in/base64-tool/
 - https://www.devtoolstack.in/url-encoder-decoder/
+- https://www.devtoolstack.in/jwt-decoder/
+- https://www.devtoolstack.in/yaml-formatter/
 
 This keeps all developer tools under one shared DevToolStack domain.

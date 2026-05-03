@@ -45,5 +45,9 @@ public class WebRoutingConfig implements WebMvcConfigurer {
         registry.addViewController("/base64-tool/").setViewName("forward:/base64-tool/index.html");
         registry.addViewController("/url-encoder-decoder").setViewName("forward:/url-encoder-decoder/index.html");
         registry.addViewController("/url-encoder-decoder/").setViewName("forward:/url-encoder-decoder/index.html");
+        registry.addViewController("/jwt-decoder").setViewName("forward:/jwt-decoder/index.html");
+        registry.addViewController("/jwt-decoder/").setViewName("forward:/jwt-decoder/index.html");
+        registry.addViewController("/yaml-formatter").setViewName("forward:/yaml-formatter/index.html");
+        registry.addViewController("/yaml-formatter/").setViewName("forward:/yaml-formatter/index.html");
     }
 }

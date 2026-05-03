@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>DevToolStack - Free Online Developer Tools for Oracle, SQL and Backend</title>
-  <meta name="description" content="DevToolStack is a fast, SEO-friendly hub of free online developer tools for Oracle PL/SQL, JSON formatting, text comparison, XML formatting, Base64 utilities, URL encoding, and backend workflows.">
+  <meta name="description" content="DevToolStack is a fast, SEO-friendly hub of free online developer tools for Oracle PL/SQL, JSON formatting, text comparison, XML formatting, YAML formatting, Base64 utilities, URL encoding, JWT decoding, and backend workflows.">
   <meta name="robots" content="index, follow, max-image-preview:large">
   <meta name="author" content="DevToolStack">
   <meta name="application-name" content="DevToolStack">
@@ -88,6 +88,20 @@
         "name": "URL Encoder Decoder",
         "description": "Encode URLs, query strings, and API parameters or decode percent-encoded text online.",
         "url": "https://www.devtoolstack.in/url-encoder-decoder/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 8,
+        "name": "JWT Decoder",
+        "description": "Decode JWT header and payload claims online for auth debugging and API troubleshooting.",
+        "url": "https://www.devtoolstack.in/jwt-decoder/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 9,
+        "name": "YAML Formatter",
+        "description": "Format YAML, validate config files, and normalize manifests online.",
+        "url": "https://www.devtoolstack.in/yaml-formatter/"
       }
     ]
   }
@@ -353,6 +367,8 @@
         <a class="nav-link" href="/xml-formatter/">XML Formatter</a>
         <a class="nav-link" href="/base64-tool/">Base64 Tool</a>
         <a class="nav-link" href="/url-encoder-decoder/">URL Tool</a>
+        <a class="nav-link" href="/jwt-decoder/">JWT Tool</a>
+        <a class="nav-link" href="/yaml-formatter/">YAML Tool</a>
         <button class="theme-toggle" type="button" id="themeToggle" aria-label="Toggle light or dark theme">Light mode</button>
       </div>
     </nav>
@@ -383,11 +399,12 @@
   /xml-formatter/ -> format XML and SOAP
   /base64-tool/ -> encode and decode Base64
   /url-encoder-decoder/ -> escape and unescape URLs
-  /jwtdecoder/   -> planned JWT decoder</pre>
+  /jwt-decoder/  -> inspect JWT claims and timing
+  /yaml-formatter/ -> format YAML and configs</pre>
         </div>
         <div class="preview-meta">
-          <div class="metric"><strong>6</strong><span>Live tools</span></div>
-          <div class="metric"><strong>5</strong><span>Planned tools</span></div>
+          <div class="metric"><strong>8</strong><span>Live tools</span></div>
+          <div class="metric"><strong>4</strong><span>Planned tools</span></div>
           <div class="metric"><strong>1</strong><span>Shared domain</span></div>
         </div>
       </aside>
@@ -417,7 +434,7 @@
         </div>
         <div class="featured-aside">
           <strong>Built as a multi-tool platform</strong>
-          <p>Every tool is hosted under the same domain using clean paths such as <code>/jsonformatter/</code>, <code>/textcompare/</code>, <code>/xml-formatter/</code>, <code>/base64-tool/</code>, <code>/url-encoder-decoder/</code>, and <code>/unwrapplsql/</code>. This keeps the brand centralized while giving each utility a dedicated landing page.</p>
+          <p>Every tool is hosted under the same domain using clean paths such as <code>/jsonformatter/</code>, <code>/textcompare/</code>, <code>/xml-formatter/</code>, <code>/base64-tool/</code>, <code>/url-encoder-decoder/</code>, <code>/jwt-decoder/</code>, <code>/yaml-formatter/</code>, and <code>/unwrapplsql/</code>. This keeps the brand centralized while giving each utility a dedicated landing page.</p>
           <p><a href="#tools">View all current tools</a></p>
         </div>
       </article>
@@ -488,6 +505,22 @@
           </div>
           <footer><span class="status live">Live</span><a class="mini-cta" href="/url-encoder-decoder/">Open</a></footer>
         </article>
+        <article class="tool-card">
+          <div>
+            <div class="tool-icon" aria-hidden="true">JWT</div>
+            <h3>JWT Decoder</h3>
+            <p>Decode JWT header and payload claims for auth debugging, expiration checks, and token inspection.</p>
+          </div>
+          <footer><span class="status live">Live</span><a class="mini-cta" href="/jwt-decoder/">Open</a></footer>
+        </article>
+        <article class="tool-card">
+          <div>
+            <div class="tool-icon" aria-hidden="true">YML</div>
+            <h3>YAML Formatter</h3>
+            <p>Format YAML, validate config files, and normalize manifests for Kubernetes, CI, and app settings.</p>
+          </div>
+          <footer><span class="status live">Live</span><a class="mini-cta" href="/yaml-formatter/">Open</a></footer>
+        </article>
       </div>
     </section>
 
@@ -500,11 +533,9 @@
         </div>
         <p>DevToolStack is path-based under one domain. Each future tool will get its own URL, sitemap entry, metadata, and dedicated landing page.</p>
       </div>
-      <p class="roadmap-note">Planned URL pattern: <code>devtoolstack.in/sqlformatter/</code>, <code>devtoolstack.in/jwtdecoder/</code>, <code>devtoolstack.in/hash-generator/</code>, and more. This keeps every tool SEO-focused and easy to share.</p>
+      <p class="roadmap-note">Planned URL pattern: <code>devtoolstack.in/sqlformatter/</code>, <code>devtoolstack.in/regex-tester/</code>, <code>devtoolstack.in/hash-generator/</code>, and more. This keeps every tool SEO-focused and easy to share.</p>
       <div class="roadmap-grid">
         <article class="roadmap-card"><strong>SQL Formatter</strong><p>Format SQL and PL/SQL scripts with indentation and keyword alignment.</p><span class="roadmap-meta">Next</span></article>
-        <article class="roadmap-card"><strong>JWT Decoder</strong><p>Decode JWT headers and payloads safely for backend troubleshooting.</p><span class="roadmap-meta">Planned</span></article>
-        <article class="roadmap-card"><strong>YAML Formatter</strong><p>Beautify and validate YAML for configuration files and CI pipelines.</p><span class="roadmap-meta">Planned</span></article>
         <article class="roadmap-card"><strong>Regex Tester</strong><p>Test regular expressions against sample text with match highlighting.</p><span class="roadmap-meta">Planned</span></article>
         <article class="roadmap-card"><strong>Timestamp Converter</strong><p>Convert Unix timestamps, ISO dates, and local timezone values.</p><span class="roadmap-meta">Planned</span></article>
         <article class="roadmap-card"><strong>Hash Generator</strong><p>Create MD5, SHA-1, and SHA-256 hashes quickly for debugging and verification.</p><span class="roadmap-meta">Planned</span></article>
@@ -544,6 +575,16 @@
           <h3>Encode and Decode URLs Online</h3>
           <p>Use the URL tool to escape query strings, inspect redirect parameters, and decode percent-encoded values quickly.</p>
         </a>
+        <a class="guide-card" href="/jwt-decoder/">
+          <span>JWT workflow</span>
+          <h3>Decode JWT Tokens Online</h3>
+          <p>Use the JWT decoder to inspect token headers, payload claims, expiration times, and issuer or audience details quickly.</p>
+        </a>
+        <a class="guide-card" href="/yaml-formatter/">
+          <span>YAML workflow</span>
+          <h3>Format YAML Online</h3>
+          <p>Use the YAML formatter to normalize config files, validate manifests, and improve readability for CI and Kubernetes workflows.</p>
+        </a>
         <a class="guide-card" href="#sql-formatting-practices">
           <span>SQL workflow</span>
           <h3>Best SQL Formatting Practices</h3>
@@ -577,12 +618,12 @@
           <div>
             <h3 id="sql-formatting-practices">Best SQL formatting practices</h3>
             <p>Consistent SQL formatting improves code review, debugging, and knowledge transfer. Keywords should be readable, nested blocks should be indented, and long expressions should be broken into logical sections. For PL/SQL, structure matters even more because packages contain declarations, functions, procedures, exception handlers, cursors, and SQL statements in a single file. A formatter helps developers recognize control flow and separate business logic from database access.</p>
-            <p>The upcoming SQL Formatter will build on the same principles used in UnwrapPLSQL: instant access, readable output, copy support, and download options. The live JSON Formatter, Text Compare, XML Formatter, Base64 Tool, and URL Encoder/Decoder support backend debugging and API development workflows, making DevToolStack a central dashboard for fast online developer utilities.</p>
+            <p>The upcoming SQL Formatter will build on the same principles used in UnwrapPLSQL: instant access, readable output, copy support, and download options. The live JSON Formatter, Text Compare, XML Formatter, Base64 Tool, URL Encoder/Decoder, JWT Decoder, and YAML Formatter support backend debugging and API development workflows, making DevToolStack a central dashboard for fast online developer utilities.</p>
           </div>
         </div>
 
         <h2>Benefits of DevToolStack</h2>
-        <p>DevToolStack is built as a central platform rather than a single isolated page. Each tool gets a clean path-based URL such as <code>/unwrapplsql/</code>, <code>/jsonformatter/</code>, <code>/textcompare/</code>, <code>/xml-formatter/</code>, <code>/base64-tool/</code>, or <code>/url-encoder-decoder/</code>, while future utilities can use paths like <code>/sqlformatter/</code> and <code>/jwtdecoder/</code>. This structure keeps the dashboard useful for repeat visitors while allowing Google to rank each dedicated tool page for its own search intent.</p>
+        <p>DevToolStack is built as a central platform rather than a single isolated page. Each tool gets a clean path-based URL such as <code>/unwrapplsql/</code>, <code>/jsonformatter/</code>, <code>/textcompare/</code>, <code>/xml-formatter/</code>, <code>/base64-tool/</code>, <code>/url-encoder-decoder/</code>, <code>/jwt-decoder/</code>, or <code>/yaml-formatter/</code>, while future utilities can use paths like <code>/sqlformatter/</code> and <code>/regex-tester/</code>. This structure keeps the dashboard useful for repeat visitors while allowing Google to rank each dedicated tool page for its own search intent.</p>
         <p>The platform focuses on fast loading, semantic HTML, mobile-first layouts, clear headings, internal links, and crawlable content. Users get instant access without login friction, and search engines get a structured site with a root homepage, sitemap, robots file, guide content, and tool-specific landing pages. The long-term goal is simple: make DevToolStack a trusted collection of free developer tools online for Oracle developers, SQL users, backend engineers, and data-focused teams.</p>
       </article>
     </section>
@@ -598,6 +639,8 @@
         <a href="/xml-formatter/">XML Formatter</a>
         <a href="/base64-tool/">Base64 Tool</a>
         <a href="/url-encoder-decoder/">URL Tool</a>
+        <a href="/jwt-decoder/">JWT Tool</a>
+        <a href="/yaml-formatter/">YAML Tool</a>
         <a href="/sitemap.xml">Sitemap</a>
         <a href="/robots.txt">Robots</a>
         <a href="https://github.com/Ashokav008/unwrapplsql" rel="noopener noreferrer">GitHub</a>

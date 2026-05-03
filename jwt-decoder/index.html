@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JWT Decoder Online Free | Decode JWT Token</title>
+  <meta name="description" content="Free online JWT decoder to inspect token headers, payload claims, expiration, issuer, and audience instantly in the browser.">
+  <meta name="keywords" content="jwt decoder online, decode jwt token, jwt parser, jwt payload decoder, jwt header decoder">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <meta name="author" content="DevToolStack">
+  <meta name="application-name" content="JWT Decoder">
+  <meta name="theme-color" content="#0f172a">
+  <link rel="canonical" href="https://www.devtoolstack.in/jwt-decoder/">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.devtoolstack.in/jwt-decoder/">
+  <meta property="og:title" content="JWT Decoder Online Free | Decode JWT Token">
+  <meta property="og:description" content="Decode JWT header and payload claims instantly in the browser for auth debugging and API troubleshooting.">
+  <meta property="og:site_name" content="DevToolStack">
+  <meta property="og:locale" content="en_IN">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="JWT Decoder Online Free | Decode JWT Token">
+  <meta name="twitter:description" content="Fast browser-based JWT decoder for auth debugging, API testing, and claim inspection.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./styles.css">
+  <link rel="icon" href="/unwrapplsql/assets/logo.svg" type="image/svg+xml">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "JWT Decoder",
+    "url": "https://www.devtoolstack.in/jwt-decoder/",
+    "applicationCategory": "DeveloperApplication",
+    "operatingSystem": "Web",
+    "description": "Free browser-based JWT decoder for token header inspection, payload claims, expiration review, and auth debugging.",
+    "inLanguage": "en",
+    "isAccessibleForFree": true,
+    "publisher": {
+      "@type": "Organization",
+      "name": "DevToolStack",
+      "url": "https://www.devtoolstack.in/"
+    },
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD"
+    },
+    "featureList": [
+      "Decode JWT header",
+      "Decode JWT payload",
+      "Inspect exp, iat, and nbf claims",
+      "Copy decoded JSON",
+      "Download decoded output",
+      "Browser-only processing"
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What does a JWT decoder do?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "A JWT decoder reads the Base64URL-encoded header and payload sections of a JSON Web Token so developers can inspect claims like issuer, subject, audience, expiration, and issued-at time."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Does decoding a JWT verify the signature?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "No. Decoding a JWT does not prove the token is valid or trusted. Signature verification requires the correct secret or public key and is separate from decoding."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can this tool inspect expired tokens?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. The tool can decode expired tokens and show claims like exp, iat, and nbf so developers can understand why a token is no longer accepted."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Does this JWT decoder upload my token?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "No. JWT decoding happens fully in the browser, so the token stays on your device."
+        }
+      }
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "DevToolStack",
+        "item": "https://www.devtoolstack.in/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "JWT Decoder",
+        "item": "https://www.devtoolstack.in/jwt-decoder/"
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <div class="toast-stack" id="toastStack" aria-live="polite" aria-atomic="true"></div>
+  <div class="page-shell">
+    <header class="hero">
+      <nav class="nav" aria-label="Primary navigation">
+        <a class="brand" href="/" aria-label="DevToolStack home">
+          <span class="brand-mark" aria-hidden="true">JWT</span>
+          <span><strong>DevToolStack</strong><small>JWT Decoder</small></span>
+        </a>
+        <div class="nav-links">
+          <a href="/">Home</a>
+          <a href="/unwrapplsql/">UnwrapPLSQL</a>
+          <a href="/jsonformatter/">JSON Formatter</a>
+          <a href="/textcompare/">Text Compare</a>
+          <a href="/xml-formatter/">XML Formatter</a>
+          <a href="/base64-tool/">Base64 Tool</a>
+          <a href="/url-encoder-decoder/">URL Tool</a>
+          <button class="theme-toggle" type="button" id="themeToggle">Light mode</button>
+        </div>
+      </nav>
+
+      <div class="hero-row">
+        <div>
+          <p class="eyebrow">Developer utility</p>
+          <h1>JWT Decoder Online</h1>
+          <p class="hero-subtitle">Decode JWT header and payload claims instantly for auth debugging, token inspection, and API troubleshooting.</p>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="workspace card" aria-labelledby="workspace-title">
+        <div class="toolbar">
+          <div>
+            <p class="section-kicker">Tool workspace</p>
+            <h2 id="workspace-title">Inspect JWT claims safely in the browser</h2>
+          </div>
+          <div class="toolbar-actions">
+            <button class="btn btn-primary btn-small" type="button" id="decodeBtn">Decode JWT</button>
+            <button class="btn btn-secondary btn-small" type="button" id="copyHeaderBtn">Copy header</button>
+            <button class="btn btn-secondary btn-small" type="button" id="copyPayloadBtn">Copy payload</button>
+            <button class="btn btn-secondary btn-small" type="button" id="downloadBtn">Download</button>
+            <button class="btn btn-secondary btn-small" type="button" id="clearBtn">Clear</button>
+          </div>
+        </div>
+
+        <div class="status-bar" id="statusBar">
+          <span class="status-pill idle" id="statusPill">Ready</span>
+          <p class="status-message" id="statusMessage">Paste a JWT on the left to inspect the header, payload, and token timing claims.</p>
+        </div>
+
+        <div class="smart-bar">
+          <div class="smart-hint" id="smartHint">Smart detection looks for the three-section JWT format: header.payload.signature</div>
+          <button class="smart-action" type="button" id="smartAction" hidden>Looks like a JWT — Decode suggested</button>
+        </div>
+
+        <div class="claim-grid">
+          <article class="claim-card">
+            <span class="claim-label">Algorithm</span>
+            <strong id="algValue">—</strong>
+          </article>
+          <article class="claim-card">
+            <span class="claim-label">Issuer</span>
+            <strong id="issValue">—</strong>
+          </article>
+          <article class="claim-card">
+            <span class="claim-label">Subject</span>
+            <strong id="subValue">—</strong>
+          </article>
+          <article class="claim-card">
+            <span class="claim-label">Audience</span>
+            <strong id="audValue">—</strong>
+          </article>
+          <article class="claim-card">
+            <span class="claim-label">Expires</span>
+            <strong id="expValue">—</strong>
+          </article>
+          <article class="claim-card">
+            <span class="claim-label">Signature</span>
+            <strong id="signatureValue">Not verified</strong>
+          </article>
+        </div>
+
+        <div class="editor-grid">
+          <article class="editor-panel">
+            <div class="editor-head">
+              <div>
+                <h3>JWT input</h3>
+                <p id="inputMeta">0 lines | 0 characters</p>
+              </div>
+            </div>
+            <textarea id="inputToken" spellcheck="false" placeholder="Paste a JSON Web Token here..."></textarea>
+          </article>
+          <article class="editor-panel">
+            <div class="editor-head">
+              <div>
+                <h3>Decoded header</h3>
+                <p id="headerMeta">0 lines | 0 characters</p>
+              </div>
+            </div>
+            <textarea id="headerOutput" spellcheck="false" readonly placeholder="Decoded JWT header will appear here..."></textarea>
+          </article>
+          <article class="editor-panel">
+            <div class="editor-head">
+              <div>
+                <h3>Decoded payload</h3>
+                <p id="payloadMeta">0 lines | 0 characters</p>
+              </div>
+            </div>
+            <textarea id="payloadOutput" spellcheck="false" readonly placeholder="Decoded JWT payload will appear here..."></textarea>
+          </article>
+        </div>
+
+        <div class="note-panel">
+          <strong>Important:</strong>
+          <span>Decoding a JWT does not verify its signature. Use the decoded claims for inspection only unless you also validate the token with the correct signing key.</span>
+        </div>
+      </section>
+
+      <section class="seo-panel card" aria-labelledby="seo-title">
+        <div class="seo-intro">
+          <h2 id="seo-title">Why a JWT decoder is one of the most useful auth debugging tools</h2>
+          <p>JSON Web Tokens show up everywhere in modern backend systems. Developers see them in login flows, API gateways, SSO integrations, mobile backends, microservice authorization, reverse proxies, and frontend session handling. The challenge is that a JWT is compact by design, which means the actual claims are hidden behind Base64URL encoding until someone decodes them. A JWT decoder makes that structure visible instantly so teams can understand what a token contains before guessing at the root cause of an auth problem.</p>
+          <p>When authentication or authorization fails, the issue is often in the claims rather than in the transport itself. A token might be expired, issued for the wrong audience, missing a required scope, signed with an unexpected algorithm, or created by a different issuer than the one the service trusts. Without decoding the token, debugging becomes slow and error-prone. With a browser-based JWT decoder, engineers can inspect the header and payload immediately and move from confusion to diagnosis much faster.</p>
+        </div>
+
+        <div class="content-columns">
+          <article>
+            <h2>What is a JWT decoder?</h2>
+            <p>A JWT decoder is a tool that reads a JSON Web Token and converts the encoded header and payload into human-readable JSON. A JWT usually has three parts separated by periods: the header, the payload, and the signature. The header describes token metadata such as the algorithm, while the payload contains claims such as issuer, subject, audience, expiration, and custom application data. Decoding those sections does not change the token; it simply reveals what is already inside it.</p>
+            <p>That visibility is useful because JWTs are designed to be compact for transport. Compact tokens are great for APIs and auth flows, but they are not easy to read when copied from a browser, log file, header, or network trace. A decoder fills that gap by turning the compact string into structured JSON that developers can inspect comfortably.</p>
+            <h3>JWT decoding is not verification</h3>
+            <p>A common misunderstanding is that decoding a JWT proves it is valid. It does not. Decoding only reveals the token contents. Verification is a separate cryptographic step that checks the signature using the appropriate secret or public key.</p>
+          </article>
+          <article>
+            <h2>Why decoding JWTs matters in APIs</h2>
+            <p>APIs rely on claims to decide what a caller is allowed to do. If the token contains the wrong audience, the wrong issuer, or an expired timestamp, the service may reject it even if the token looks structurally correct. That is why decoding is so valuable during troubleshooting. It helps teams answer practical questions quickly: who issued this token, when does it expire, which user or client does it represent, and what scopes or roles are included?</p>
+            <p>JWT decoding is also useful during local development and test automation. Engineers often need to inspect temporary tokens produced by identity providers, staging environments, API gateways, or test harnesses. A decoder reduces the time needed to confirm whether the claims match the environment and expectations.</p>
+            <h3>Useful for frontend and backend teams</h3>
+            <p>Frontend engineers use JWT decoders when debugging login flows and session behavior, while backend teams use them to troubleshoot authorization failures, middleware configuration, and token translation issues between services.</p>
+          </article>
+        </div>
+
+        <div class="seo-grid">
+          <article>
+            <h3>Common header fields</h3>
+            <p>The header usually includes the token type and signing algorithm, which helps identify whether the token matches expected auth configuration.</p>
+          </article>
+          <article>
+            <h3>Common payload claims</h3>
+            <p>Claims like <code>iss</code>, <code>sub</code>, <code>aud</code>, <code>exp</code>, <code>iat</code>, and <code>nbf</code> are often the first things teams check during token debugging.</p>
+          </article>
+          <article>
+            <h3>Why browser tools help</h3>
+            <p>A fast in-browser decoder keeps sensitive debugging workflows lightweight and avoids switching into separate CLI or IDE tools for a simple claim inspection task.</p>
+          </article>
+        </div>
+
+        <div class="content-columns">
+          <article>
+            <h2>How to decode a JWT online</h2>
+            <p>Paste the token into the input panel and run the decoder. A good JWT tool will split the token into its three sections, decode the header and payload using Base64URL rules, and pretty-print the resulting JSON. It should also surface useful summary data like expiration time, issuer, subject, and algorithm so developers do not have to scan the raw payload for the most important claims.</p>
+            <p>Error handling matters too. Invalid tokens may be truncated, malformed, or not actually be JWTs at all. A production-ready decoder should explain whether the structure is wrong, a segment cannot be decoded, or the decoded content is not valid JSON.</p>
+            <h3>Inspecting token time claims</h3>
+            <p>Time claims are especially helpful for auth debugging. A decoder should make <code>exp</code>, <code>iat</code>, and <code>nbf</code> easier to read so teams can spot clock drift, expired sessions, or tokens that are not yet valid.</p>
+          </article>
+          <article>
+            <h2>Real-world JWT decoder use cases</h2>
+            <p>One common use case is login troubleshooting. A user signs in successfully, but an API still responds with unauthorized or forbidden. Decoding the JWT often reveals that the audience does not match the API, the issuer is unexpected, or the scopes are incomplete. Another use case is staging-versus-production debugging, where a token from one environment is accidentally reused in another and fails because the claims no longer line up.</p>
+            <p>JWT decoders are also useful for support engineers, QA teams, implementation consultants, and platform teams working with SSO providers, API gateways, or custom identity layers. Instead of treating the token as an opaque string, they can inspect it directly and make better decisions about what to fix next.</p>
+            <h3>Helpful for auth middleware reviews</h3>
+            <p>If a service expects a specific issuer, audience, or algorithm, decoding a token quickly confirms whether the incoming request is even in the right shape before anyone dives into server-side logs.</p>
+          </article>
+        </div>
+
+        <div class="faq-list">
+          <details>
+            <summary>Can this JWT decoder verify signatures?</summary>
+            <p>No. This tool is intentionally focused on decoding and claim inspection. Signature verification requires the correct key material and should be handled separately.</p>
+          </details>
+          <details>
+            <summary>Can I inspect expired JWTs here?</summary>
+            <p>Yes. Expired tokens can still be decoded so you can understand their claims and diagnose why a service rejected them.</p>
+          </details>
+          <details>
+            <summary>Does this tool support Base64URL JWT format?</summary>
+            <p>Yes. JWT decoding uses Base64URL normalization so standard token segments can be decoded correctly in the browser.</p>
+          </details>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script src="./script.js"></script>
+</body>
+</html>
