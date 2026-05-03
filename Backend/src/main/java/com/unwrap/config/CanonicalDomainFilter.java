@@ -27,7 +27,9 @@ public class CanonicalDomainFilter extends OncePerRequestFilter {
         if (host != null && !isLocalHost(host)) {
             String hostname = host.split(":")[0].toLowerCase();
             if (hostname.endsWith(RENDER_HOST_SUFFIX) || hostname.equals(ROOT_HOST)) {
-                String target = "https://" + CANONICAL_HOST + request.getRequestURI();
+                String requestUri = request.getRequestURI();
+                String targetPath = requestUri.equals("/") ? "/unwrapplsql/" : requestUri;
+                String target = "https://" + CANONICAL_HOST + targetPath;
                 String query = request.getQueryString();
                 if (query != null && !query.isBlank()) {
                     target += "?" + query;
