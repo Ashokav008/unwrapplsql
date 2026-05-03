@@ -1,9 +1,10 @@
-﻿FROM maven:3.9-eclipse-temurin-17 AS build
+FROM maven:3.9-eclipse-temurin-17 AS build
 WORKDIR /app
 COPY Backend/pom.xml Backend/pom.xml
 RUN mvn -f Backend/pom.xml dependency:go-offline -B
 COPY Backend Backend
-COPY unwrapplsql Backend/src/main/resources/static
+COPY unwrapplsql Backend/src/main/resources/static/unwrapplsql
+COPY jsonformatter Backend/src/main/resources/static/jsonformatter
 RUN mvn -f Backend/pom.xml clean package -DskipTests
 
 FROM eclipse-temurin:17-jre

@@ -4,4 +4,5 @@ services:
     runtime: docker
     plan: free
     dockerfilePath: ./Dockerfile
-    healthCheckPath: /unwrapplsql/
+    healthCheckPath: /
+

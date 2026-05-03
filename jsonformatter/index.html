@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JSON Formatter Online - Format, Validate & Beautify JSON | DevToolStack</title>
+  <meta name="description" content="Free JSON Formatter online. Format, validate, beautify, minify, upload, copy, search, and download JSON instantly in your browser.">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <meta name="author" content="DevToolStack">
+  <meta name="theme-color" content="#0f172a">
+  <link rel="canonical" href="https://www.devtoolstack.in/jsonformatter/">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.devtoolstack.in/jsonformatter/">
+  <meta property="og:title" content="JSON Formatter Online - Beautify and Validate JSON">
+  <meta property="og:description" content="Use the dedicated JSON Formatter page to format, validate, beautify, minify, copy, upload, and download JSON online.">
+  <meta property="og:site_name" content="DevToolStack">
+  <meta property="og:locale" content="en_IN">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="JSON Formatter Online - DevToolStack">
+  <meta name="twitter:description" content="Free online JSON formatter, validator, minifier, and downloader.">
+  <link rel="icon" href="/unwrapplsql/assets/logo.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/jsonformatter/style.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "JSON Formatter",
+    "url": "https://www.devtoolstack.in/jsonformatter/",
+    "applicationCategory": "DeveloperApplication",
+    "operatingSystem": "Web",
+    "description": "Free online JSON formatter to beautify, validate, minify, copy, upload, and download JSON.",
+    "inLanguage": "en",
+    "isAccessibleForFree": true,
+    "publisher": {
+      "@type": "Organization",
+      "name": "DevToolStack",
+      "url": "https://www.devtoolstack.in/"
+    },
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD"
+    },
+    "featureList": [
+      "JSON beautifier",
+      "JSON validator",
+      "JSON minifier",
+      "File upload",
+      "Copy formatted JSON",
+      "Download JSON file"
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "DevToolStack",
+        "item": "https://www.devtoolstack.in/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "JSON Formatter",
+        "item": "https://www.devtoolstack.in/jsonformatter/"
+      }
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is a JSON formatter?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "A JSON formatter converts compact or messy JSON into readable, indented JSON so developers can inspect nested objects, arrays, keys, and values more easily."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can I validate JSON online?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. DevToolStack JSON Formatter validates JSON and shows a friendly error if the input has invalid syntax such as missing commas, unclosed braces, or incorrect quotes."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Does the JSON formatter support upload and download?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. You can upload a .json or .txt file, format it, copy the output, search inside it, and download the formatted result as a .json file."
+        }
+      }
+    ]
+  }
+  </script></head>
+<body>
+  <div class="toast-stack" id="toastStack" aria-live="polite" aria-atomic="true"></div>
+
+  <header class="site-header">
+    <nav class="nav shell" aria-label="Primary navigation">
+      <a class="brand" href="/">
+        <span class="brand-mark" aria-hidden="true">DT</span>
+        <span><strong>DevToolStack</strong><small>JSON Formatter</small></span>
+      </a>
+      <div class="nav-actions">
+        <a href="/" class="nav-link">All tools</a>
+        <a href="/unwrapplsql/" class="nav-link">UnwrapPLSQL</a>
+        <button class="theme-toggle" type="button" id="themeToggle">Light mode</button>
+      </div>
+    </nav>
+
+    <section class="hero shell">
+      <div>
+        <p class="eyebrow">Free & instant</p>
+        <h1>JSON Formatter Online</h1>
+        <p class="hero-copy">Beautify, validate, minify, copy, upload, and download JSON directly in your browser. Built for API debugging, backend logs, config files, and data review.</p>
+      </div>
+      <div class="hero-card" aria-label="Tool capabilities">
+        <span>No login</span>
+        <span>Browser-based</span>
+        <span>Copy & download</span>
+      </div>
+    </section>
+  </header>
+
+  <main class="shell">
+    <section class="toolbar card" aria-label="JSON actions">
+      <div class="toolbar-left">
+        <button class="btn primary" type="button" id="formatBtn">Format JSON</button>
+        <button class="btn secondary" type="button" id="validateBtn">Validate</button>
+        <button class="btn secondary" type="button" id="minifyBtn">Minify</button>
+        <button class="btn secondary" type="button" id="clearBtn">Clear</button>
+      </div>
+      <div class="toolbar-right">
+        <label class="select-label">Indent
+          <select id="indentSelect" aria-label="Indent size">
+            <option value="2">2 spaces</option>
+            <option value="4">4 spaces</option>
+          </select>
+        </label>
+        <input class="file-input" type="file" id="fileInput" accept=".json,.txt,application/json,text/plain">
+        <button class="btn secondary" type="button" id="uploadBtn">Upload JSON</button>
+        <button class="btn secondary" type="button" id="sampleBtn">Load sample</button>
+      </div>
+    </section>
+
+    <section class="workspace">
+      <article class="editor-card card">
+        <div class="panel-header">
+          <div>
+            <h2>Input JSON</h2>
+            <p>Paste JSON, drag a file here, or upload a `.json` file.</p>
+          </div>
+          <span class="badge" id="inputBadge">Ready</span>
+        </div>
+        <div class="drop-zone" id="dropZone">
+          <textarea id="inputJson" spellcheck="false" placeholder='Paste JSON here, for example: { "name": "DevToolStack" }'></textarea>
+        </div>
+      </article>
+
+      <article class="editor-card card">
+        <div class="panel-header">
+          <div>
+            <h2>Formatted Output</h2>
+            <p>Review, copy, search, or download clean JSON.</p>
+          </div>
+          <span class="badge success" id="outputBadge">Waiting</span>
+        </div>
+        <div class="output-wrap">
+          <pre id="outputJson" tabindex="0">Click Format JSON to beautify your JSON.</pre>
+        </div>
+        <div class="output-actions">
+          <input id="searchInput" type="search" placeholder="Search output..." aria-label="Search output">
+          <button class="btn secondary" type="button" id="copyBtn">Copy output</button>
+          <button class="btn secondary" type="button" id="downloadBtn">Download .json</button>
+        </div>
+      </article>
+    </section>
+
+    <section class="stats-grid" aria-label="JSON statistics">
+      <div class="stat card"><strong id="statusStat">Not checked</strong><span>Status</span></div>
+      <div class="stat card"><strong id="sizeStat">0 B</strong><span>Size</span></div>
+      <div class="stat card"><strong id="keysStat">0</strong><span>Keys</span></div>
+      <div class="stat card"><strong id="depthStat">0</strong><span>Max depth</span></div>
+    </section>
+
+    <section class="seo-panel card" id="json-formatting-guide" aria-labelledby="seo-title">
+      <p class="kicker">Developer utility</p>
+      <h2 id="seo-title">Free JSON Formatter, Validator, and Minifier</h2>
+      <p>A JSON formatter online is useful when you work with API responses, backend logs, configuration files, webhook payloads, and structured data. Paste a compact or messy JSON document into DevToolStack, click <strong>Format JSON</strong>, and the tool converts it into readable indentation with clear nesting.</p>
+            <h3>How to format JSON online</h3>
+      <p>To format JSON online, paste your JSON into the input editor or upload a `.json` file, choose a 2-space or 4-space indent, and click <strong>Format JSON</strong>. The output panel shows clean, readable JSON that you can search, copy, or download. Because this page is dedicated to JSON formatting, users searching for <strong>json formatter online</strong>, <strong>format JSON</strong>, or <strong>JSON validator</strong> can land directly on this tool instead of the DevToolStack dashboard.</p>
+      <h3>Validate and minify JSON</h3>
+      <p>This JSON formatter also works as a JSON validator. If the input contains a missing comma, invalid quote, trailing comma, or broken object structure, the tool shows a friendly error message so you can fix the data quickly. Developers can also minify JSON before sending it through APIs or saving compact config values.</p>
+        <span>Browser-based</span>
+        <span>No login</span>
+      <p>The JSON Formatter page is part of the single-domain DevToolStack architecture. The dashboard remains at <code>/</code>, UnwrapPLSQL remains at <code>/unwrapplsql/</code>, and this JSON tool has its own clean URL at <code>/jsonformatter/</code> with dedicated metadata, schema, and sitemap visibility.</p>
+    </section>
+  </main>
+
+  <script src="/jsonformatter/app.js"></script>
+</body>
+</html>
